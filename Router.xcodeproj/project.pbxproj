@@ -8,11 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		330476E71CCFD587006302F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330476E61CCFD587006302F5 /* AppDelegate.swift */; };
-		330476E91CCFD587006302F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330476E81CCFD587006302F5 /* ViewController.swift */; };
-		330476EC1CCFD587006302F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330476EA1CCFD587006302F5 /* Main.storyboard */; };
 		330476EE1CCFD587006302F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 330476ED1CCFD587006302F5 /* Assets.xcassets */; };
 		330476F11CCFD587006302F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330476EF1CCFD587006302F5 /* LaunchScreen.storyboard */; };
 		330476FC1CCFD587006302F5 /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330476FB1CCFD587006302F5 /* RouterTests.swift */; };
+		3356CAEE1CD3B2EB00477610 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CAED1CD3B2EB00477610 /* Login.storyboard */; };
+		3356CAF01CD3B30C00477610 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CAEF1CD3B30C00477610 /* Signup.storyboard */; };
+		3356CAF21CD3B31500477610 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CAF11CD3B31500477610 /* Home.storyboard */; };
+		3356CAF51CD3B32700477610 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CAF41CD3B32700477610 /* Message.storyboard */; };
+		3356CAF71CD3B33300477610 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CAF61CD3B33300477610 /* Friends.storyboard */; };
+		3356CAF91CD3B33D00477610 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CAF81CD3B33D00477610 /* Discover.storyboard */; };
+		3356CAFB1CD3B34900477610 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CAFA1CD3B34900477610 /* Setting.storyboard */; };
+		3356CAFD1CD3B51B00477610 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CAFC1CD3B51B00477610 /* Root.storyboard */; };
+		3356CAFF1CD3B56800477610 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CAFE1CD3B56800477610 /* RootTabBarController.swift */; };
+		3356CB011CD3B5A700477610 /* DispatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB001CD3B5A700477610 /* DispatchController.swift */; };
+		3356CB031CD3B63D00477610 /* UIStoryboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB021CD3B63D00477610 /* UIStoryboardManager.swift */; };
+		3356CB051CD3B73700477610 /* UIViewControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB041CD3B73700477610 /* UIViewControllerManager.swift */; };
+		3356CB091CD3B87B00477610 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB081CD3B87B00477610 /* SettingTableViewController.swift */; };
+		3356CB0B1CD3B8C600477610 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB0A1CD3B8C600477610 /* DiscoverTableViewController.swift */; };
+		3356CB0D1CD3B8E400477610 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB0C1CD3B8E400477610 /* FriendsViewController.swift */; };
+		3356CB0F1CD3B90C00477610 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB0E1CD3B90C00477610 /* MessageTableViewController.swift */; };
+		3356CB111CD3B96800477610 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB101CD3B96800477610 /* HomeViewController.swift */; };
+		3356CB131CD3B98700477610 /* SignupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB121CD3B98700477610 /* SignupTableViewController.swift */; };
+		3356CB151CD3B9A200477610 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB141CD3B9A200477610 /* LoginTableViewController.swift */; };
+		3356CB1A1CD3C1C800477610 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CB191CD3C1C800477610 /* Welcome.storyboard */; };
+		3356CB1C1CD3C1DD00477610 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB1B1CD3C1DD00477610 /* WelcomeViewController.swift */; };
 		3B7D1F666879010FBF13687E /* libPods-Router.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C18510526B3E2DFBDF3E3698 /* libPods-Router.a */; };
 		F9711FCDB0438ADC0A720037 /* libPods-RouterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6084E034FB6CC10AC4E7BC42 /* libPods-RouterTests.a */; };
 /* End PBXBuildFile section */
@@ -30,14 +49,33 @@
 /* Begin PBXFileReference section */
 		330476E31CCFD587006302F5 /* Router.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Router.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		330476E61CCFD587006302F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		330476E81CCFD587006302F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		330476EB1CCFD587006302F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		330476ED1CCFD587006302F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		330476F01CCFD587006302F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		330476F21CCFD587006302F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		330476F71CCFD587006302F5 /* RouterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		330476FB1CCFD587006302F5 /* RouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
 		330476FD1CCFD587006302F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3356CAED1CD3B2EB00477610 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		3356CAEF1CD3B30C00477610 /* Signup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
+		3356CAF11CD3B31500477610 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		3356CAF41CD3B32700477610 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
+		3356CAF61CD3B33300477610 /* Friends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
+		3356CAF81CD3B33D00477610 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		3356CAFA1CD3B34900477610 /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		3356CAFC1CD3B51B00477610 /* Root.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		3356CAFE1CD3B56800477610 /* RootTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		3356CB001CD3B5A700477610 /* DispatchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchController.swift; sourceTree = "<group>"; };
+		3356CB021CD3B63D00477610 /* UIStoryboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardManager.swift; sourceTree = "<group>"; };
+		3356CB041CD3B73700477610 /* UIViewControllerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerManager.swift; sourceTree = "<group>"; };
+		3356CB081CD3B87B00477610 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		3356CB0A1CD3B8C600477610 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
+		3356CB0C1CD3B8E400477610 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		3356CB0E1CD3B90C00477610 /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
+		3356CB101CD3B96800477610 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3356CB121CD3B98700477610 /* SignupTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupTableViewController.swift; sourceTree = "<group>"; };
+		3356CB141CD3B9A200477610 /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
+		3356CB191CD3C1C800477610 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		3356CB1B1CD3C1DD00477610 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		6084E034FB6CC10AC4E7BC42 /* libPods-RouterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RouterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D5E3ADB05B32CEFD8AEBD5C /* Pods-Router.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Router.release.xcconfig"; path = "Pods/Target Support Files/Pods-Router/Pods-Router.release.xcconfig"; sourceTree = "<group>"; };
 		83DCF7E888BA5AF72FA8EE23 /* Pods-RouterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RouterTests/Pods-RouterTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,12 +127,11 @@
 		330476E51CCFD587006302F5 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				330476E61CCFD587006302F5 /* AppDelegate.swift */,
-				330476E81CCFD587006302F5 /* ViewController.swift */,
-				330476EA1CCFD587006302F5 /* Main.storyboard */,
-				330476ED1CCFD587006302F5 /* Assets.xcassets */,
-				330476EF1CCFD587006302F5 /* LaunchScreen.storyboard */,
-				330476F21CCFD587006302F5 /* Info.plist */,
+				3356CACE1CD3B06900477610 /* Utils */,
+				3356CACF1CD3B07500477610 /* ThirdParty */,
+				3356CAD01CD3B08D00477610 /* SupportingFiles */,
+				3356CAD11CD3B0AF00477610 /* LogicalLayer */,
+				3356CAD31CD3B0D100477610 /* PresentationLayer */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -106,6 +143,298 @@
 				330476FD1CCFD587006302F5 /* Info.plist */,
 			);
 			path = RouterTests;
+			sourceTree = "<group>";
+		};
+		3356CACE1CD3B06900477610 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3356CB021CD3B63D00477610 /* UIStoryboardManager.swift */,
+				3356CB041CD3B73700477610 /* UIViewControllerManager.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		3356CACF1CD3B07500477610 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		3356CAD01CD3B08D00477610 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				330476E61CCFD587006302F5 /* AppDelegate.swift */,
+				330476F21CCFD587006302F5 /* Info.plist */,
+				330476EF1CCFD587006302F5 /* LaunchScreen.storyboard */,
+				330476ED1CCFD587006302F5 /* Assets.xcassets */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		3356CAD11CD3B0AF00477610 /* LogicalLayer */ = {
+			isa = PBXGroup;
+			children = (
+				3356CAD21CD3B0C200477610 /* DataModel */,
+			);
+			name = LogicalLayer;
+			sourceTree = "<group>";
+		};
+		3356CAD21CD3B0C200477610 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		3356CAD31CD3B0D100477610 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				3356CADB1CD3B19000477610 /* Root_Tabbar */,
+				3356CADA1CD3B17E00477610 /* Setting_设置 */,
+				3356CAD91CD3B17500477610 /* Discover_发现 */,
+				3356CAD81CD3B16D00477610 /* Friends_好友 */,
+				3356CAD71CD3B14100477610 /* Message_聊天 */,
+				3356CAD61CD3B13A00477610 /* Home_首页 */,
+				3356CB161CD3C19400477610 /* Welcome_欢迎页 */,
+				3356CAD51CD3B13100477610 /* Signup_注册 */,
+				3356CAD41CD3B12700477610 /* Login_登录 */,
+			);
+			name = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		3356CAD41CD3B12700477610 /* Login_登录 */ = {
+			isa = PBXGroup;
+			children = (
+				3356CAEC1CD3B2CD00477610 /* ViewControllers */,
+				3356CAEB1CD3B2C900477610 /* Views */,
+			);
+			name = "Login_登录";
+			sourceTree = "<group>";
+		};
+		3356CAD51CD3B13100477610 /* Signup_注册 */ = {
+			isa = PBXGroup;
+			children = (
+				3356CAEA1CD3B2C100477610 /* ViewControllers */,
+				3356CAE91CD3B2BD00477610 /* Views */,
+			);
+			name = "Signup_注册";
+			sourceTree = "<group>";
+		};
+		3356CAD61CD3B13A00477610 /* Home_首页 */ = {
+			isa = PBXGroup;
+			children = (
+				3356CAE81CD3B2B700477610 /* ViewControllers */,
+				3356CAE71CD3B2B200477610 /* Views */,
+			);
+			name = "Home_首页";
+			sourceTree = "<group>";
+		};
+		3356CAD71CD3B14100477610 /* Message_聊天 */ = {
+			isa = PBXGroup;
+			children = (
+				3356CAE61CD3B2AA00477610 /* ViewControllers */,
+				3356CAE51CD3B2A600477610 /* Views */,
+			);
+			name = "Message_聊天";
+			sourceTree = "<group>";
+		};
+		3356CAD81CD3B16D00477610 /* Friends_好友 */ = {
+			isa = PBXGroup;
+			children = (
+				3356CAE41CD3B29F00477610 /* ViewControllers */,
+				3356CAE31CD3B29A00477610 /* Views */,
+			);
+			name = "Friends_好友";
+			sourceTree = "<group>";
+		};
+		3356CAD91CD3B17500477610 /* Discover_发现 */ = {
+			isa = PBXGroup;
+			children = (
+				3356CAE21CD3B29100477610 /* ViewControllers */,
+				3356CAE11CD3B28D00477610 /* Views */,
+			);
+			name = "Discover_发现";
+			sourceTree = "<group>";
+		};
+		3356CADA1CD3B17E00477610 /* Setting_设置 */ = {
+			isa = PBXGroup;
+			children = (
+				3356CAE01CD3B1D400477610 /* ViewControllers */,
+				3356CADF1CD3B1D000477610 /* Views */,
+			);
+			name = "Setting_设置";
+			sourceTree = "<group>";
+		};
+		3356CADB1CD3B19000477610 /* Root_Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				3356CADE1CD3B1BD00477610 /* DispatchController */,
+				3356CADD1CD3B1AC00477610 /* ViewControllers */,
+				3356CADC1CD3B1A200477610 /* Views */,
+			);
+			name = Root_Tabbar;
+			sourceTree = "<group>";
+		};
+		3356CADC1CD3B1A200477610 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3356CAFC1CD3B51B00477610 /* Root.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3356CADD1CD3B1AC00477610 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3356CAFE1CD3B56800477610 /* RootTabBarController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3356CADE1CD3B1BD00477610 /* DispatchController */ = {
+			isa = PBXGroup;
+			children = (
+				3356CB001CD3B5A700477610 /* DispatchController.swift */,
+			);
+			name = DispatchController;
+			sourceTree = "<group>";
+		};
+		3356CADF1CD3B1D000477610 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3356CAFA1CD3B34900477610 /* Setting.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3356CAE01CD3B1D400477610 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3356CB081CD3B87B00477610 /* SettingTableViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3356CAE11CD3B28D00477610 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3356CAF81CD3B33D00477610 /* Discover.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3356CAE21CD3B29100477610 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3356CB0A1CD3B8C600477610 /* DiscoverTableViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3356CAE31CD3B29A00477610 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3356CAF61CD3B33300477610 /* Friends.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3356CAE41CD3B29F00477610 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3356CB0C1CD3B8E400477610 /* FriendsViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3356CAE51CD3B2A600477610 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3356CAF41CD3B32700477610 /* Message.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3356CAE61CD3B2AA00477610 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3356CB0E1CD3B90C00477610 /* MessageTableViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3356CAE71CD3B2B200477610 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3356CAF11CD3B31500477610 /* Home.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3356CAE81CD3B2B700477610 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3356CB101CD3B96800477610 /* HomeViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3356CAE91CD3B2BD00477610 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3356CAEF1CD3B30C00477610 /* Signup.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3356CAEA1CD3B2C100477610 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3356CB121CD3B98700477610 /* SignupTableViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3356CAEB1CD3B2C900477610 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3356CAED1CD3B2EB00477610 /* Login.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3356CAEC1CD3B2CD00477610 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3356CB141CD3B9A200477610 /* LoginTableViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3356CB161CD3C19400477610 /* Welcome_欢迎页 */ = {
+			isa = PBXGroup;
+			children = (
+				3356CB181CD3C1B700477610 /* ViewControllers */,
+				3356CB171CD3C1B300477610 /* Views */,
+			);
+			name = "Welcome_欢迎页";
+			sourceTree = "<group>";
+		};
+		3356CB171CD3C1B300477610 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3356CB191CD3C1C800477610 /* Welcome.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3356CB181CD3C1B700477610 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3356CB1B1CD3C1DD00477610 /* WelcomeViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		47FA7558CD6E58D2678313FE /* Pods */ = {
@@ -217,9 +546,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3356CAEE1CD3B2EB00477610 /* Login.storyboard in Resources */,
 				330476F11CCFD587006302F5 /* LaunchScreen.storyboard in Resources */,
 				330476EE1CCFD587006302F5 /* Assets.xcassets in Resources */,
-				330476EC1CCFD587006302F5 /* Main.storyboard in Resources */,
+				3356CAF21CD3B31500477610 /* Home.storyboard in Resources */,
+				3356CAF71CD3B33300477610 /* Friends.storyboard in Resources */,
+				3356CB1A1CD3C1C800477610 /* Welcome.storyboard in Resources */,
+				3356CAF01CD3B30C00477610 /* Signup.storyboard in Resources */,
+				3356CAFB1CD3B34900477610 /* Setting.storyboard in Resources */,
+				3356CAF51CD3B32700477610 /* Message.storyboard in Resources */,
+				3356CAF91CD3B33D00477610 /* Discover.storyboard in Resources */,
+				3356CAFD1CD3B51B00477610 /* Root.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,8 +667,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				330476E91CCFD587006302F5 /* ViewController.swift in Sources */,
+				3356CB091CD3B87B00477610 /* SettingTableViewController.swift in Sources */,
+				3356CB0D1CD3B8E400477610 /* FriendsViewController.swift in Sources */,
+				3356CB0F1CD3B90C00477610 /* MessageTableViewController.swift in Sources */,
+				3356CB031CD3B63D00477610 /* UIStoryboardManager.swift in Sources */,
+				3356CB151CD3B9A200477610 /* LoginTableViewController.swift in Sources */,
+				3356CB051CD3B73700477610 /* UIViewControllerManager.swift in Sources */,
+				3356CAFF1CD3B56800477610 /* RootTabBarController.swift in Sources */,
+				3356CB131CD3B98700477610 /* SignupTableViewController.swift in Sources */,
+				3356CB111CD3B96800477610 /* HomeViewController.swift in Sources */,
 				330476E71CCFD587006302F5 /* AppDelegate.swift in Sources */,
+				3356CB0B1CD3B8C600477610 /* DiscoverTableViewController.swift in Sources */,
+				3356CB011CD3B5A700477610 /* DispatchController.swift in Sources */,
+				3356CB1C1CD3C1DD00477610 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,14 +702,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		330476EA1CCFD587006302F5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				330476EB1CCFD587006302F5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		330476EF1CCFD587006302F5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
