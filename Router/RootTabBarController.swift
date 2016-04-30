@@ -48,13 +48,18 @@ class RootTabBarController: UITabBarController {
         
         for config in configs {
             let viewController = config["ViewController"] as! UIViewController
-            viewController.tabBarItem = UITabBarItem.init(title: config["Title"] as? String, image: UIImage(named: config["ImageName"] as! String), selectedImage: UIImage(named: config["SelectedImageName"] as! String))
+            viewController.tabBarItem = UITabBarItem.init(title: config["Title"] as? String, image: UIImage(named: config["ImageName"] as! String)!.imageWithRenderingMode(.AlwaysOriginal), selectedImage: UIImage(named: config["SelectedImageName"] as! String))
             controllers.append(viewController)
         }
         
         self.setViewControllers(controllers, animated: false)
         
-        self.tabBar.backgroundColor = UIColor(red: 27/255, green: 27/255, blue: 27/255, alpha: 1)
+        // tabbar style
+        self.tabBar.backgroundImage = UIImage.getImageWithColor(UIColor(red: 27/255, green: 27/255, blue: 27/255, alpha: 1), size: CGSize(width: 320, height: 49))
+        let selectedColor = UIColor(red: 255/255, green: 211/255, blue: 0/255, alpha: 1)
+        UITabBar.appearance().tintColor = selectedColor
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState:.Normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: selectedColor], forState:.Selected)
     }
 
     override func didReceiveMemoryWarning() {
