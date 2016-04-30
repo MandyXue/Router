@@ -32,8 +32,6 @@
 		3356CB151CD3B9A200477610 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB141CD3B9A200477610 /* LoginTableViewController.swift */; };
 		3356CB1A1CD3C1C800477610 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CB191CD3C1C800477610 /* Welcome.storyboard */; };
 		3356CB1C1CD3C1DD00477610 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB1B1CD3C1DD00477610 /* WelcomeViewController.swift */; };
-		3B7D1F666879010FBF13687E /* libPods-Router.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C18510526B3E2DFBDF3E3698 /* libPods-Router.a */; };
-		F9711FCDB0438ADC0A720037 /* libPods-RouterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6084E034FB6CC10AC4E7BC42 /* libPods-RouterTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,12 +74,6 @@
 		3356CB141CD3B9A200477610 /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		3356CB191CD3C1C800477610 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		3356CB1B1CD3C1DD00477610 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		6084E034FB6CC10AC4E7BC42 /* libPods-RouterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RouterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D5E3ADB05B32CEFD8AEBD5C /* Pods-Router.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Router.release.xcconfig"; path = "Pods/Target Support Files/Pods-Router/Pods-Router.release.xcconfig"; sourceTree = "<group>"; };
-		83DCF7E888BA5AF72FA8EE23 /* Pods-RouterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RouterTests/Pods-RouterTests.debug.xcconfig"; sourceTree = "<group>"; };
-		977D3F4EF96EA04BCDADCC3E /* Pods-Router.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Router.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Router/Pods-Router.debug.xcconfig"; sourceTree = "<group>"; };
-		A242C7048262AC6623E52131 /* Pods-RouterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RouterTests/Pods-RouterTests.release.xcconfig"; sourceTree = "<group>"; };
-		C18510526B3E2DFBDF3E3698 /* libPods-Router.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Router.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B7D1F666879010FBF13687E /* libPods-Router.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +88,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9711FCDB0438ADC0A720037 /* libPods-RouterTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +100,6 @@
 				330476E51CCFD587006302F5 /* Router */,
 				330476FA1CCFD587006302F5 /* RouterTests */,
 				330476E41CCFD587006302F5 /* Products */,
-				47FA7558CD6E58D2678313FE /* Pods */,
 				DF29F3F7B90F045FC8D706CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -437,22 +426,9 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		47FA7558CD6E58D2678313FE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				977D3F4EF96EA04BCDADCC3E /* Pods-Router.debug.xcconfig */,
-				6D5E3ADB05B32CEFD8AEBD5C /* Pods-Router.release.xcconfig */,
-				83DCF7E888BA5AF72FA8EE23 /* Pods-RouterTests.debug.xcconfig */,
-				A242C7048262AC6623E52131 /* Pods-RouterTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		DF29F3F7B90F045FC8D706CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C18510526B3E2DFBDF3E3698 /* libPods-Router.a */,
-				6084E034FB6CC10AC4E7BC42 /* libPods-RouterTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -464,12 +440,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 330477001CCFD587006302F5 /* Build configuration list for PBXNativeTarget "Router" */;
 			buildPhases = (
-				4F5E0B0EE129A2370960C45A /* Check Pods Manifest.lock */,
 				330476DF1CCFD587006302F5 /* Sources */,
 				330476E01CCFD587006302F5 /* Frameworks */,
 				330476E11CCFD587006302F5 /* Resources */,
-				1CA86A09160318355835472E /* Embed Pods Frameworks */,
-				431F14F68E600F2AE7198D45 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -583,51 +556,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RouterTests/Pods-RouterTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1CA86A09160318355835472E /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Router/Pods-Router-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		431F14F68E600F2AE7198D45 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Router/Pods-Router-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4F5E0B0EE129A2370960C45A /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C07E951B6554AF0A439CAED4 /* Copy Pods Resources */ = {
@@ -796,7 +724,6 @@
 		};
 		330477011CCFD587006302F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 977D3F4EF96EA04BCDADCC3E /* Pods-Router.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Router/Info.plist;
@@ -808,7 +735,6 @@
 		};
 		330477021CCFD587006302F5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D5E3ADB05B32CEFD8AEBD5C /* Pods-Router.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Router/Info.plist;
@@ -820,7 +746,6 @@
 		};
 		330477041CCFD587006302F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83DCF7E888BA5AF72FA8EE23 /* Pods-RouterTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RouterTests/Info.plist;
@@ -833,7 +758,6 @@
 		};
 		330477051CCFD587006302F5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A242C7048262AC6623E52131 /* Pods-RouterTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RouterTests/Info.plist;
