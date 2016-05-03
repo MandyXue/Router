@@ -44,6 +44,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+public extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = true
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
 public extension UIButton {
     class func defaultStyle(button:UIButton) {
         button.layer.cornerRadius = button.bounds.height/2

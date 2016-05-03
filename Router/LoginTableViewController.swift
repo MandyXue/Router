@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginTableViewController: UITableViewController {
+class LoginTableViewController: UITableViewController,UITextFieldDelegate{
     
     //MARK:- Outlet
     
@@ -16,6 +16,10 @@ class LoginTableViewController: UITableViewController {
     @IBOutlet weak var UsernameView: UIView!
     @IBOutlet weak var PasswordView: UIView!
     @IBOutlet weak var LoginButton: UIButton!
+    
+    @IBOutlet weak var Username: UITextField!
+    @IBOutlet weak var Password: UITextField!
+    
     
     // MARK: - BaseViewController
     
@@ -26,6 +30,9 @@ class LoginTableViewController: UITableViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        Username.delegate = self
+        Password.delegate = self
+        dismissKeyboard()
         UIConfigure()
     }
     
@@ -43,6 +50,10 @@ class LoginTableViewController: UITableViewController {
     }
 
     @IBAction func ForgotPassword() {
+    }
+
+    @IBAction func Close() {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
 }
