@@ -11,9 +11,11 @@ import UIKit
 class DispatchController: NSObject {
     class func dispatchToMain()-> UIViewController {
 //        if LFUser.currentUser() == nil {
-//            return LoginTableViewController.loadFromStoryboard()
+//            return WelcomeViewController.loadFromStoryboard()
 //        } else {
-            return RootTabBarController.loadFromStoryboard()
+//            return RootTabBarController.loadFromStoryboard()
 //        }
+        return WelcomeViewController.loadFromStoryboard()
+
     }
 }

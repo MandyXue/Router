@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E64a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uVw-Iz-tdP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uVw-Iz-tdP">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
+        <!--Login-->
+        <scene sceneID="R7X-uV-L1T">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Login" storyboardName="Login" id="Zbz-EP-192" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vom-mx-azi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1108.5" y="215"/>
+        </scene>
+        <!--Signup-->
+        <scene sceneID="fHe-Ta-wtt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Signup" id="L0I-7W-oed" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aFj-zS-QRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1113.5" y="263"/>
+        </scene>
         <!--Welcome View Controller-->
         <scene sceneID="XcZ-Sp-YOQ">
             <objects>
-                <viewController storyboardIdentifier="WelcomeViewController" id="uVw-Iz-tdP" customClass="WelcomeViewController" customModule="Router" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Welcome" storyboardIdentifier="WelcomeViewController" id="uVw-Iz-tdP" customClass="WelcomeViewController" customModule="Router" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ejg-io-pxJ"/>
                         <viewControllerLayoutGuide type="bottom" id="C1V-Aa-jGq"/>
@@ -16,12 +33,92 @@
                     <view key="view" contentMode="scaleToFill" id="KOL-7k-F9c">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="GFq-wu-hlH">
+                                <rect key="frame" x="159" y="105" width="282" height="91"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Router" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vV3-Nr-NZ7">
+                                <rect key="frame" x="238" y="214" width="125" height="53"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="44"/>
+                                <color key="textColor" red="0.97647058819999999" green="0.98431372549999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsi-oX-t2M">
+                                <rect key="frame" x="155" y="403" width="291" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="UiB-YS-L5n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="注册">
+                                    <color key="titleColor" red="0.97647058819999999" green="0.98431372549999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="SignUp" destination="uVw-Iz-tdP" eventType="touchUpInside" id="Nsn-nt-3I8"/>
+                                    <segue destination="L0I-7W-oed" kind="presentation" id="NMJ-DF-DzT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="加入Router,  开启你的精彩旅途" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21X-iv-hW1">
+                                <rect key="frame" x="203" y="366" width="194" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.97647058819999999" green="0.98431372549999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTa-0F-s4H">
+                                <rect key="frame" x="258" y="534" width="84" height="29"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="用户协议与条款">
+                                            <attributes>
+                                                <color key="NSColor" red="0.97647058819999999" green="0.98431372549999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="12" name="PingFangSC-Regular"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q08-E1-U8L">
+                                <rect key="frame" x="155" y="468" width="291" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="登录">
+                                    <color key="titleColor" red="0.97647058819999999" green="0.98431372549999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="SignIn" destination="uVw-Iz-tdP" eventType="touchUpInside" id="Gtg-uf-bMM"/>
+                                    <segue destination="Zbz-EP-192" kind="presentation" id="pvb-it-BJx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.69803921570000005" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vV3-Nr-NZ7" firstAttribute="top" secondItem="GFq-wu-hlH" secondAttribute="bottom" multiplier="1.05" constant="8" symbolic="YES" id="7sV-kv-58M"/>
+                            <constraint firstItem="GFq-wu-hlH" firstAttribute="centerX" secondItem="KOL-7k-F9c" secondAttribute="centerX" id="9a8-yw-QXX"/>
+                            <constraint firstItem="bsi-oX-t2M" firstAttribute="width" secondItem="21X-iv-hW1" secondAttribute="width" multiplier="1.5" id="Fz5-bU-dIb"/>
+                            <constraint firstItem="q08-E1-U8L" firstAttribute="top" secondItem="bsi-oX-t2M" secondAttribute="bottom" multiplier="1.02" constant="8" symbolic="YES" id="Hsq-qF-F8B"/>
+                            <constraint firstItem="q08-E1-U8L" firstAttribute="centerX" secondItem="bsi-oX-t2M" secondAttribute="centerX" id="KBH-9c-j5m"/>
+                            <constraint firstItem="vV3-Nr-NZ7" firstAttribute="centerX" secondItem="GFq-wu-hlH" secondAttribute="centerX" id="Lvz-pw-Cox"/>
+                            <constraint firstItem="21X-iv-hW1" firstAttribute="centerX" secondItem="vV3-Nr-NZ7" secondAttribute="centerX" id="Onz-C6-slZ"/>
+                            <constraint firstItem="BTa-0F-s4H" firstAttribute="top" secondItem="q08-E1-U8L" secondAttribute="bottom" multiplier="1.02" constant="8" symbolic="YES" id="Rp2-3D-FJm"/>
+                            <constraint firstItem="GFq-wu-hlH" firstAttribute="centerY" secondItem="KOL-7k-F9c" secondAttribute="centerY" multiplier="0.5" id="ThH-5R-dbh"/>
+                            <constraint firstItem="21X-iv-hW1" firstAttribute="centerY" secondItem="KOL-7k-F9c" secondAttribute="centerY" multiplier="1.25" id="UHk-f4-p27"/>
+                            <constraint firstItem="bsi-oX-t2M" firstAttribute="top" secondItem="21X-iv-hW1" secondAttribute="bottom" multiplier="1.03" constant="8" symbolic="YES" id="X13-pV-HA9"/>
+                            <constraint firstItem="BTa-0F-s4H" firstAttribute="centerX" secondItem="q08-E1-U8L" secondAttribute="centerX" id="bom-A4-8cY"/>
+                            <constraint firstItem="q08-E1-U8L" firstAttribute="width" secondItem="bsi-oX-t2M" secondAttribute="width" id="g56-tJ-kVk"/>
+                            <constraint firstItem="q08-E1-U8L" firstAttribute="height" secondItem="bsi-oX-t2M" secondAttribute="height" id="lli-Xh-8Q2"/>
+                            <constraint firstItem="bsi-oX-t2M" firstAttribute="centerX" secondItem="21X-iv-hW1" secondAttribute="centerX" id="zGN-Sm-KkV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="LoginButton" destination="q08-E1-U8L" id="pwj-YX-juX"/>
+                        <outlet property="RegisterButton" destination="bsi-oX-t2M" id="azZ-HO-5oe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpa-z3-s3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="534" y="215"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon" width="282" height="91"/>
+    </resources>
 </document>

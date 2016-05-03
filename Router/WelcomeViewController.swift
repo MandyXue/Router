@@ -9,35 +9,29 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
+
+//MARK:- Outlet
+    @IBOutlet weak var RegisterButton: UIButton!
+    @IBOutlet weak var LoginButton: UIButton!
     
-    // MARK: - BaseViewController
-    
+// MARK: - BaseViewController
+
     static func loadFromStoryboard() -> UIViewController {
         return UIStoryboard.router_welcomeStoryboard().instantiateViewControllerWithIdentifier(self.router_className())
     }
     
-    // MARK: - Life Cycle
-
+// MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        UIApplication.sharedApplication().windows[0].rootViewController = DispatchController.dispatchToMain()
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+        UIButton.defaultStyle(RegisterButton)
+        UIButton.defaultStyle(LoginButton)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+//MARK:- Action
+    @IBAction func SignUp() {
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func SignIn() {
     }
-    */
-
 }

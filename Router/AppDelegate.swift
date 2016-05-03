@@ -44,6 +44,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+public extension UIButton {
+    class func defaultStyle(button:UIButton) {
+        button.layer.cornerRadius = button.bounds.height/2
+        button.clipsToBounds = true
+        button.layer.borderWidth = 1.2
+        button.layer.borderColor = UIColor.whiteColor().CGColor
+    }
+}
+
+
 extension UIImage {
     static func getImageWithColor(color: UIColor, size: CGSize) -> UIImage {
         let rect = CGRectMake(0, 0, size.width, size.height)
