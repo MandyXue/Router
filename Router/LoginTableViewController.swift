@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVOSCloud
 
 class LoginTableViewController: UITableViewController,UITextFieldDelegate{
     
@@ -46,7 +47,19 @@ class LoginTableViewController: UITableViewController,UITextFieldDelegate{
     
     
 //MARK:- Action
-    @IBAction func SignUp() {
+    @IBAction func Login() {
+        AVUser.logInWithUsernameInBackground(Username.text, password: Password.text) { (user, error) in
+            if (user != nil)
+            {
+            
+                
+            }
+            else
+            {
+                print(error)
+            }
+        }
+        
     }
 
     @IBAction func ForgotPassword() {

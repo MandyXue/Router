@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import AVOSCloud
 
 class DispatchController: NSObject {
     class func dispatchToMain()-> UIViewController {
-//        if LFUser.currentUser() == nil {
-//            return WelcomeViewController.loadFromStoryboard()
-//        } else {
-//            return RootTabBarController.loadFromStoryboard()
-//        }
-        return WelcomeViewController.loadFromStoryboard()
-
+        print("----?")
+        if AVUser.currentUser() == nil {
+        print("No User")
+            return WelcomeViewController.loadFromStoryboard()
+        } else {
+            
+            return RootTabBarController.loadFromStoryboard()
+        }
     }
 }

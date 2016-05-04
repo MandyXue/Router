@@ -70,7 +70,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </textField>
                                                     </subviews>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="cHO-hx-GtH" firstAttribute="leading" secondItem="KNg-3T-mBc" secondAttribute="leading" constant="20" symbolic="YES" id="AYB-DU-70o"/>
                                                         <constraint firstItem="j1x-Js-TNi" firstAttribute="leading" secondItem="cHO-hx-GtH" secondAttribute="trailing" constant="8" symbolic="YES" id="NHS-aY-DN7"/>
@@ -296,7 +296,6 @@
                                                         <color key="titleColor" red="0.97647058819999999" green="0.98431372549999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="toLogin" destination="j8A-l2-hWs" eventType="touchUpInside" id="Rec-Gf-B7h"/>
                                                         <segue destination="MiB-4H-NrQ" kind="presentation" id="VJk-0v-af8"/>
                                                     </connections>
                                                 </button>

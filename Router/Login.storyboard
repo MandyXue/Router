@@ -24,7 +24,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="273"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqp-gT-lj9">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqp-gT-lj9">
                                                     <rect key="frame" x="24" y="24" width="46" height="46"/>
                                                     <state key="normal" image="close"/>
                                                     <connections>
@@ -69,7 +69,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </textField>
                                                     </subviews>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="gnd-ol-Lib" firstAttribute="top" secondItem="xZQ-g4-1Qn" secondAttribute="top" constant="20" symbolic="YES" id="FFt-yu-BZ8"/>
                                                         <constraint firstItem="gnd-ol-Lib" firstAttribute="centerY" secondItem="xZQ-g4-1Qn" secondAttribute="centerY" id="Wys-0F-WZv"/>
@@ -160,6 +160,9 @@
                                                     <state key="normal" title="登录">
                                                         <color key="titleColor" red="0.97647058819999999" green="0.98431372549999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="Login" destination="vE9-Ja-Ivb" eventType="touchUpInside" id="Gut-3T-zEk"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -191,7 +194,6 @@
                                                         <color key="titleColor" red="0.97647058819999999" green="0.98431372549999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="SignUp" destination="vE9-Ja-Ivb" eventType="touchUpInside" id="RC1-EA-MvT"/>
                                                         <segue destination="Iqu-HD-ACC" kind="presentation" id="rGK-wo-gWY"/>
                                                     </connections>
                                                 </button>

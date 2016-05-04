@@ -1,1 +1,23 @@
+PODS:
+  - AVOSCloud (3.2.8)
+  - AVOSCloudCrashReporting (3.2.8):
+    - AVOSCloud
+  - AVOSCloudDynamic (3.2.8)
+  - AVOSCloudIM (3.2.8):
+    - AVOSCloud
+  - MBProgressHUD (0.9.2)
+
+DEPENDENCIES:
+  - AVOSCloudCrashReporting
+  - AVOSCloudDynamic
+  - AVOSCloudIM
+  - MBProgressHUD
+
+SPEC CHECKSUMS:
+  AVOSCloud: b789619942a4275e615f8f0782e7475675951b95
+  AVOSCloudCrashReporting: 2dddc7dfc8ef423492a01c0076b3e97716854701
+  AVOSCloudDynamic: 440bbf71ffe533a5090a4329fe80e1027e3b0654
+  AVOSCloudIM: d2f6a13d64f9676a43e4d68b822bd1be3f96fb76
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+
 COCOAPODS: 0.39.0
