@@ -24,7 +24,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="273"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqp-gT-lj9">
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqp-gT-lj9">
                                                     <rect key="frame" x="24" y="24" width="46" height="46"/>
                                                     <state key="normal" image="close"/>
                                                     <connections>
@@ -192,6 +192,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="SignUp" destination="vE9-Ja-Ivb" eventType="touchUpInside" id="RC1-EA-MvT"/>
+                                                        <segue destination="Iqu-HD-ACC" kind="presentation" id="rGK-wo-gWY"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vj7-Ot-5dt">
@@ -233,6 +234,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wL-4J-OtL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="299" y="437"/>
+        </scene>
+        <!--Signup-->
+        <scene sceneID="aER-eJ-bvv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Signup" id="Iqu-HD-ACC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zx9-5Q-hCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="705.5" y="437"/>
         </scene>
     </scenes>
     <resources>
