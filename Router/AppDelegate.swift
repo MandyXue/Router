@@ -19,8 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         AVOSCloud.setApplicationId("iWaypu9VwqVYN1zATmCcrXGV-gzGzoHsz", clientKey: "d1AAJY5E1oidiFplcbKxAShw")
         AVAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
-        
-            
+        let  initialViewController =   DispatchController.dispatchToMain()
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+
         return true
     }
 
@@ -59,6 +61,16 @@ public extension UIViewController {
     func dismissKeyboard() {
         view.endEditing(true)
     }
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+
 }
 
 public extension UIButton {

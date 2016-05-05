@@ -11,13 +11,13 @@ import AVOSCloud
 
 class DispatchController: NSObject {
     class func dispatchToMain()-> UIViewController {
-        print("----?")
-        if AVUser.currentUser() == nil {
-        print("No User")
-            return WelcomeViewController.loadFromStoryboard()
-        } else {
-            
+        print("test if have user liu ")
+        if AVUser.currentUser() != nil {
             return RootTabBarController.loadFromStoryboard()
+        }
+        else
+        {
+            return WelcomeViewController.loadFromStoryboard()
         }
     }
 }

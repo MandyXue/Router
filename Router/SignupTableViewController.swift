@@ -8,6 +8,7 @@
 
 import UIKit
 import AVOSCloud
+import MBProgressHUD
 
 class SignupTableViewController: UITableViewController {
     
@@ -33,6 +34,7 @@ class SignupTableViewController: UITableViewController {
 // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         configureUI()
     }
 //MARK:- Action
@@ -41,9 +43,34 @@ class SignupTableViewController: UITableViewController {
     }
     
     @IBAction func SignUp() {
+        let Username = username.text
+        let Password = password.text
+        let Email = mailText.text
+        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.mode = .Indeterminate
+        hud.labelText = "正在注册"
+
+        guard Username != nil && Username?.characters.count != 0 && Password != nil && Password?.characters.count != 0 && Email != nil && Email?.characters.count != 0  else
+        {
+            hud.mode = .CustomView
+            let imageView = UIImage(named: "error")?.imageWithRenderingMode(.AlwaysTemplate)
+            hud.customView = UIImageView(image:imageView)
+            hud.square = true
+            hud.labelText = "用户名或密码不能为空"
+            hud.hide(true, afterDelay: 1)
+            return
+        }
         
-       if checkInput(username.text) && checkInput(password.text) && checkInput(mailText.text)
-       {
+        guard Password == confirmPassword.text else
+        {
+            hud.mode = .CustomView
+            let imageView = UIImage(named: "error")?.imageWithRenderingMode(.AlwaysOriginal)
+            hud.customView = UIImageView(image:imageView)
+            hud.square = true
+            hud.labelText = "两次输入密码要一致"
+            hud.hide(true, afterDelay: 1)
+            return
+        }
         
         let user = AVUser()
         user.username = username.text
@@ -53,26 +80,30 @@ class SignupTableViewController: UITableViewController {
         user.signUpInBackgroundWithBlock { (succeed, error) in
             if succeed
             {
-                print("Sign Up Succeed")
-                
+                hud.mode = .CustomView
+                let imageView = UIImage(named: "Checkmark")?.imageWithRenderingMode(.AlwaysTemplate)
+                hud.customView = UIImageView(image:imageView)
+                hud.square = true
+                hud.labelText = "注册成功"
+                hud.hide(true, afterDelay: 1)
+                self.delay(2, closure: {
+                    UIApplication.sharedApplication().keyWindow?.rootViewController = DispatchController.dispatchToMain()
+                })
             }
             else
             {
-                print("Sign Up Fail, User name alreay haved")
+                hud.mode = .CustomView
+                let imageView = UIImage(named: "error")?.imageWithRenderingMode(.AlwaysTemplate)
+                hud.customView = UIImageView(image:imageView)
+                hud.square = true
+                hud.labelText = "用户名已经存在"
+                hud.hide(true, afterDelay: 1)
+                self.delay(2, closure: {
+                    return
+                })
             }
          }
-        }
-        else
-       {
-        print("Invalid Input")
-       }
     }
-    
-    
-    func checkInput(input:String?) -> Bool {
-        return true
-    }
-    
     
     func configureUI() {
         tableView.backgroundView = UIImageView(image:UIImage(named: "background"))
@@ -83,5 +114,4 @@ class SignupTableViewController: UITableViewController {
         UIButton.defaultStyle(SignUpButton)
         
     }
-    
 }
