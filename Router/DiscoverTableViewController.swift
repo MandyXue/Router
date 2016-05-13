@@ -13,7 +13,9 @@ class DiscoverTableViewController: UITableViewController {
     // MARK: - BaseViewController
     
     static func loadFromStoryboard() -> UIViewController {
-        return UIStoryboard.router_discoverStoryboard().instantiateViewControllerWithIdentifier(self.router_className())
+        let controller = UIStoryboard.router_discoverStoryboard().instantiateViewControllerWithIdentifier(self.router_className())
+        let navigationController: UINavigationController = UINavigationController.init(rootViewController: controller)
+        return navigationController
     }
     
     // MARK: - Life Cycle

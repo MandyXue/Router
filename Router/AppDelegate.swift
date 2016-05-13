@@ -16,12 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        // leancloud
         AVOSCloud.setApplicationId("iWaypu9VwqVYN1zATmCcrXGV-gzGzoHsz", clientKey: "d1AAJY5E1oidiFplcbKxAShw")
         AVAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
-        let  initialViewController =   DispatchController.dispatchToMain()
+        let  initialViewController = DispatchController.dispatchToMain()
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
+        // set navigation bar style
+        let navigationBarAppearance = UINavigationBar.appearance()
+        navigationBarAppearance.tintColor = UIColor.whiteColor()
+        navigationBarAppearance.barTintColor = UIColor(red: 78/255, green: 146/255, blue: 223/255, alpha: 1)
+        navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
 
         return true
     }
