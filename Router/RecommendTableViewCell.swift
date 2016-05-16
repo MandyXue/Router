@@ -8,7 +8,9 @@
 
 import UIKit
 
-class RecommendTableViewCell: UITableViewCell {
+class RecommendTableViewCell: UITableViewCell{
+    
+    @IBOutlet weak var collectionView: UICollectionView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +22,16 @@ class RecommendTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setCollectionViewDataSourceAndDelegate(dataSourceAndDelegate delegate: protocol<UICollectionViewDelegate, UICollectionViewDataSource>) {
+        self.collectionView.dataSource = delegate
+        self.collectionView.delegate = delegate
+        self.collectionView.reloadData()
+    }
+    
+    func updateUI() {
+//        collectionView
+    }
+    
 
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate {
     
     // MARK: - Data Source
     
@@ -40,6 +40,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         // set tableview
         tableView.delegate = self
         tableView.dataSource = self
+        prepareData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,18 +53,22 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCellWithIdentifier("RecommendCell") as! RecommendTableViewCell
+            cell.setCollectionViewDataSourceAndDelegate(dataSourceAndDelegate: self)
             return cell
         case 1:
             let cell = tableView.dequeueReusableCellWithIdentifier("AllFriendLabelCell")
             return cell!
         default:
-            let cell = tableView.dequeueReusableCellWithIdentifier("AllFriendCell")
-            return cell!
+            let cell = tableView.dequeueReusableCellWithIdentifier("AllFriendCell") as! AllFriendTableViewCell
+            cell.nameLabel.text = allFriends[indexPath.row-2]["name"] as? String
+            cell.distanceLabel.text = allFriends[indexPath.row-2]["distance"] as? String
+            
+            return cell
         }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return allFriends.count+2
     }
     
     // MARK: - Table View Delegate
@@ -71,7 +76,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return 160.0
+            return 200.0
         case 1:
             return 60.0
         default:
@@ -79,9 +84,29 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    // MARK: - Collection View Data Source
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("RecommendCollection", forIndexPath: indexPath) as! RecommendCollectionViewCell
+        cell.nameLabel.text = recommendFriends[indexPath.row]["name"] as? String
+        cell.stateLabel.text = recommendFriends[indexPath.row]["state"] as? String
+        cell.distanceLabel.text = recommendFriends[indexPath.row]["distance"] as? String
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return recommendFriends.count
+    }
+    
     // MARK: - Helper
     
     func prepareData() {
-        
+        // test data
+        for i in 1...10 {
+            recommendFriends.append(["name":"推荐\(i)", "distance":"<\(i)km", "state":"离线"])
+        }
+        for i in 1...20 {
+            allFriends.append(["name":"所有\(i)", "distance":"<\(i)km"])
+        }
     }
 }
