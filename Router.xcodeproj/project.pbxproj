@@ -11,6 +11,8 @@
 		330476EE1CCFD587006302F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 330476ED1CCFD587006302F5 /* Assets.xcassets */; };
 		330476F11CCFD587006302F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330476EF1CCFD587006302F5 /* LaunchScreen.storyboard */; };
 		330476FC1CCFD587006302F5 /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330476FB1CCFD587006302F5 /* RouterTests.swift */; };
+		33456FB51CE9B35D0025DEC7 /* AllFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33456FB41CE9B35D0025DEC7 /* AllFriendTableViewCell.swift */; };
+		33456FB71CE9B36E0025DEC7 /* RecommendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33456FB61CE9B36E0025DEC7 /* RecommendTableViewCell.swift */; };
 		3356CAEE1CD3B2EB00477610 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CAED1CD3B2EB00477610 /* Login.storyboard */; };
 		3356CAF01CD3B30C00477610 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CAEF1CD3B30C00477610 /* Signup.storyboard */; };
 		3356CAF21CD3B31500477610 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CAF11CD3B31500477610 /* Home.storyboard */; };
@@ -55,6 +57,8 @@
 		330476F71CCFD587006302F5 /* RouterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		330476FB1CCFD587006302F5 /* RouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
 		330476FD1CCFD587006302F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33456FB41CE9B35D0025DEC7 /* AllFriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllFriendTableViewCell.swift; sourceTree = "<group>"; };
+		33456FB61CE9B36E0025DEC7 /* RecommendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendTableViewCell.swift; sourceTree = "<group>"; };
 		3356CAED1CD3B2EB00477610 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3356CAEF1CD3B30C00477610 /* Signup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		3356CAF11CD3B31500477610 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -138,6 +142,15 @@
 				330476FD1CCFD587006302F5 /* Info.plist */,
 			);
 			path = RouterTests;
+			sourceTree = "<group>";
+		};
+		33456FB31CE9B33D0025DEC7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				33456FB41CE9B35D0025DEC7 /* AllFriendTableViewCell.swift */,
+				33456FB61CE9B36E0025DEC7 /* RecommendTableViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		3356CACE1CD3B06900477610 /* Utils */ = {
@@ -338,6 +351,7 @@
 		3356CAE41CD3B29F00477610 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				33456FB31CE9B33D0025DEC7 /* Cells */,
 				3356CB0C1CD3B8E400477610 /* FriendsViewController.swift */,
 			);
 			name = ViewControllers;
@@ -664,6 +678,7 @@
 				3356CB0F1CD3B90C00477610 /* MessageTableViewController.swift in Sources */,
 				3356CB031CD3B63D00477610 /* UIStoryboardManager.swift in Sources */,
 				3356CB151CD3B9A200477610 /* LoginTableViewController.swift in Sources */,
+				33456FB71CE9B36E0025DEC7 /* RecommendTableViewCell.swift in Sources */,
 				3356CB051CD3B73700477610 /* UIViewControllerManager.swift in Sources */,
 				3356CAFF1CD3B56800477610 /* RootTabBarController.swift in Sources */,
 				3356CB131CD3B98700477610 /* SignupTableViewController.swift in Sources */,
@@ -672,6 +687,7 @@
 				3356CB0B1CD3B8C600477610 /* DiscoverTableViewController.swift in Sources */,
 				3356CB011CD3B5A700477610 /* DispatchController.swift in Sources */,
 				3356CB1C1CD3C1DD00477610 /* WelcomeViewController.swift in Sources */,
+				33456FB51CE9B35D0025DEC7 /* AllFriendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
