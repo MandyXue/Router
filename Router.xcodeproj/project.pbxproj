@@ -33,6 +33,7 @@
 		3356CB1A1CD3C1C800477610 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CB191CD3C1C800477610 /* Welcome.storyboard */; };
 		3356CB1C1CD3C1DD00477610 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB1B1CD3C1DD00477610 /* WelcomeViewController.swift */; };
 		63AEFA13D44F11751B5C1EBD /* Pods_Router.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAF5C971FEC8F19BC43D791 /* Pods_Router.framework */; };
+		E74EE81B1CEAB66100EA8CB0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74EE81A1CEAB66100EA8CB0 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		3356CB1B1CD3C1DD00477610 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		6EAF5C971FEC8F19BC43D791 /* Pods_Router.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Router.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B354125B2B0F688A901AB6 /* Pods-Router.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Router.release.xcconfig"; path = "Pods/Target Support Files/Pods-Router/Pods-Router.release.xcconfig"; sourceTree = "<group>"; };
+		E74EE81A1CEAB66100EA8CB0 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				3356CB101CD3B96800477610 /* HomeViewController.swift */,
+				E74EE81A1CEAB66100EA8CB0 /* CameraViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				3356CB111CD3B96800477610 /* HomeViewController.swift in Sources */,
 				330476E71CCFD587006302F5 /* AppDelegate.swift in Sources */,
 				3356CB0B1CD3B8C600477610 /* DiscoverTableViewController.swift in Sources */,
+				E74EE81B1CEAB66100EA8CB0 /* CameraViewController.swift in Sources */,
 				3356CB011CD3B5A700477610 /* DispatchController.swift in Sources */,
 				3356CB1C1CD3C1DD00477610 /* WelcomeViewController.swift in Sources */,
 			);

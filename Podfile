@@ -12,6 +12,7 @@ pod 'AVOSCloudCrashReporting'
 pod 'MBProgressHUD'
 
 # Swift Pod
+pod 'PageMenu'
 end
 
 target 'RouterTests' do
