@@ -5,6 +5,9 @@ PODS:
   - AVOSCloudDynamic (3.2.8)
   - AVOSCloudIM (3.2.8):
     - AVOSCloud
+  - JSQMessagesViewController (7.2.0):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
   - MBProgressHUD (0.9.2)
   - PageMenu (1.2.9)
 
@@ -12,6 +15,7 @@ DEPENDENCIES:
   - AVOSCloudCrashReporting
   - AVOSCloudDynamic
   - AVOSCloudIM
+  - JSQMessagesViewController
   - MBProgressHUD
   - PageMenu
 
@@ -20,6 +24,8 @@ SPEC CHECKSUMS:
   AVOSCloudCrashReporting: 2dddc7dfc8ef423492a01c0076b3e97716854701
   AVOSCloudDynamic: 440bbf71ffe533a5090a4329fe80e1027e3b0654
   AVOSCloudIM: d2f6a13d64f9676a43e4d68b822bd1be3f96fb76
+  JSQMessagesViewController: 73cab48aa92fc2d512f3b6724f3425cc47a19eb5
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
 

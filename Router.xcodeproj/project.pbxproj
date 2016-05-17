@@ -11,6 +11,9 @@
 		330476EE1CCFD587006302F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 330476ED1CCFD587006302F5 /* Assets.xcassets */; };
 		330476F11CCFD587006302F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330476EF1CCFD587006302F5 /* LaunchScreen.storyboard */; };
 		330476FC1CCFD587006302F5 /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330476FB1CCFD587006302F5 /* RouterTests.swift */; };
+		33456FB51CE9B35D0025DEC7 /* AllFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33456FB41CE9B35D0025DEC7 /* AllFriendTableViewCell.swift */; };
+		33456FB71CE9B36E0025DEC7 /* RecommendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33456FB61CE9B36E0025DEC7 /* RecommendTableViewCell.swift */; };
+		33456FB91CEA15030025DEC7 /* RecommendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33456FB81CEA15030025DEC7 /* RecommendCollectionViewCell.swift */; };
 		3356CAEE1CD3B2EB00477610 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CAED1CD3B2EB00477610 /* Login.storyboard */; };
 		3356CAF01CD3B30C00477610 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CAEF1CD3B30C00477610 /* Signup.storyboard */; };
 		3356CAF21CD3B31500477610 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CAF11CD3B31500477610 /* Home.storyboard */; };
@@ -26,12 +29,12 @@
 		3356CB091CD3B87B00477610 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB081CD3B87B00477610 /* SettingTableViewController.swift */; };
 		3356CB0B1CD3B8C600477610 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB0A1CD3B8C600477610 /* DiscoverTableViewController.swift */; };
 		3356CB0D1CD3B8E400477610 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB0C1CD3B8E400477610 /* FriendsViewController.swift */; };
-		3356CB0F1CD3B90C00477610 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB0E1CD3B90C00477610 /* MessageTableViewController.swift */; };
 		3356CB111CD3B96800477610 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB101CD3B96800477610 /* HomeViewController.swift */; };
 		3356CB131CD3B98700477610 /* SignupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB121CD3B98700477610 /* SignupTableViewController.swift */; };
 		3356CB151CD3B9A200477610 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB141CD3B9A200477610 /* LoginTableViewController.swift */; };
 		3356CB1A1CD3C1C800477610 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CB191CD3C1C800477610 /* Welcome.storyboard */; };
 		3356CB1C1CD3C1DD00477610 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB1B1CD3C1DD00477610 /* WelcomeViewController.swift */; };
+		62132C621CEABB9400C79943 /* AAMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62132C611CEABB9400C79943 /* AAMessageViewController.swift */; };
 		63AEFA13D44F11751B5C1EBD /* Pods_Router.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAF5C971FEC8F19BC43D791 /* Pods_Router.framework */; };
 		E74EE81B1CEAB66100EA8CB0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74EE81A1CEAB66100EA8CB0 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +59,9 @@
 		330476F71CCFD587006302F5 /* RouterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		330476FB1CCFD587006302F5 /* RouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
 		330476FD1CCFD587006302F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33456FB41CE9B35D0025DEC7 /* AllFriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllFriendTableViewCell.swift; sourceTree = "<group>"; };
+		33456FB61CE9B36E0025DEC7 /* RecommendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendTableViewCell.swift; sourceTree = "<group>"; };
+		33456FB81CEA15030025DEC7 /* RecommendCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCollectionViewCell.swift; sourceTree = "<group>"; };
 		3356CAED1CD3B2EB00477610 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3356CAEF1CD3B30C00477610 /* Signup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		3356CAF11CD3B31500477610 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -71,12 +77,12 @@
 		3356CB081CD3B87B00477610 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		3356CB0A1CD3B8C600477610 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 		3356CB0C1CD3B8E400477610 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
-		3356CB0E1CD3B90C00477610 /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		3356CB101CD3B96800477610 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3356CB121CD3B98700477610 /* SignupTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupTableViewController.swift; sourceTree = "<group>"; };
 		3356CB141CD3B9A200477610 /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		3356CB191CD3C1C800477610 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		3356CB1B1CD3C1DD00477610 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		62132C611CEABB9400C79943 /* AAMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAMessageViewController.swift; sourceTree = "<group>"; };
 		6EAF5C971FEC8F19BC43D791 /* Pods_Router.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Router.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B354125B2B0F688A901AB6 /* Pods-Router.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Router.release.xcconfig"; path = "Pods/Target Support Files/Pods-Router/Pods-Router.release.xcconfig"; sourceTree = "<group>"; };
 		E74EE81A1CEAB66100EA8CB0 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +146,16 @@
 				330476FD1CCFD587006302F5 /* Info.plist */,
 			);
 			path = RouterTests;
+			sourceTree = "<group>";
+		};
+		33456FB31CE9B33D0025DEC7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				33456FB41CE9B35D0025DEC7 /* AllFriendTableViewCell.swift */,
+				33456FB61CE9B36E0025DEC7 /* RecommendTableViewCell.swift */,
+				33456FB81CEA15030025DEC7 /* RecommendCollectionViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		3356CACE1CD3B06900477610 /* Utils */ = {
@@ -340,6 +356,7 @@
 		3356CAE41CD3B29F00477610 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				33456FB31CE9B33D0025DEC7 /* Cells */,
 				3356CB0C1CD3B8E400477610 /* FriendsViewController.swift */,
 			);
 			name = ViewControllers;
@@ -356,7 +373,7 @@
 		3356CAE61CD3B2AA00477610 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3356CB0E1CD3B90C00477610 /* MessageTableViewController.swift */,
+				62132C611CEABB9400C79943 /* AAMessageViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -508,7 +525,7 @@
 				TargetAttributes = {
 					330476E21CCFD587006302F5 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = WGWLK679J7;
+						DevelopmentTeam = 6QNQ63R334;
 					};
 					330476F61CCFD587006302F5 = {
 						CreatedOnToolsVersion = 7.2;
@@ -664,18 +681,21 @@
 			files = (
 				3356CB091CD3B87B00477610 /* SettingTableViewController.swift in Sources */,
 				3356CB0D1CD3B8E400477610 /* FriendsViewController.swift in Sources */,
-				3356CB0F1CD3B90C00477610 /* MessageTableViewController.swift in Sources */,
 				3356CB031CD3B63D00477610 /* UIStoryboardManager.swift in Sources */,
 				3356CB151CD3B9A200477610 /* LoginTableViewController.swift in Sources */,
+				33456FB71CE9B36E0025DEC7 /* RecommendTableViewCell.swift in Sources */,
 				3356CB051CD3B73700477610 /* UIViewControllerManager.swift in Sources */,
+				33456FB91CEA15030025DEC7 /* RecommendCollectionViewCell.swift in Sources */,
 				3356CAFF1CD3B56800477610 /* RootTabBarController.swift in Sources */,
 				3356CB131CD3B98700477610 /* SignupTableViewController.swift in Sources */,
 				3356CB111CD3B96800477610 /* HomeViewController.swift in Sources */,
+				62132C621CEABB9400C79943 /* AAMessageViewController.swift in Sources */,
 				330476E71CCFD587006302F5 /* AppDelegate.swift in Sources */,
 				3356CB0B1CD3B8C600477610 /* DiscoverTableViewController.swift in Sources */,
 				E74EE81B1CEAB66100EA8CB0 /* CameraViewController.swift in Sources */,
 				3356CB011CD3B5A700477610 /* DispatchController.swift in Sources */,
 				3356CB1C1CD3C1DD00477610 /* WelcomeViewController.swift in Sources */,
+				33456FB51CE9B35D0025DEC7 /* AllFriendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,6 +816,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Router/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AppleClub.Router;
@@ -810,6 +831,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Router/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AppleClub.Router;
