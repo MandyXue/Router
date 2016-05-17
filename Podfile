@@ -10,6 +10,7 @@ pod 'AVOSCloudDynamic'
 pod 'AVOSCloudIM'
 pod 'AVOSCloudCrashReporting'
 pod 'MBProgressHUD'
+pod 'JSQMessagesViewController'
 
 # Swift Pod
 end

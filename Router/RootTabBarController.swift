@@ -29,7 +29,7 @@ class RootTabBarController: UITabBarController {
             ["Title": "聊天",
                 "ImageName": "chat",
                 "SelectedImageName": "chat-selected",
-                "ViewController": MessageTableViewController.loadFromStoryboard()],
+                "ViewController": AAMessageViewController.loadFromStoryboard()],
             ["Title": "好友",
                 "ImageName": "friend",
                 "SelectedImageName": "friend-selected",
