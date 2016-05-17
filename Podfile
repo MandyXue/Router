@@ -11,7 +11,7 @@ pod 'AVOSCloudIM'
 pod 'AVOSCloudCrashReporting'
 pod 'MBProgressHUD'
 pod 'JSQMessagesViewController'
-
+pod 'SDWebImage'
 # Swift Pod
 pod 'PageMenu'
 end

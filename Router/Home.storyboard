@@ -39,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSR-mM-4bW">
-                                <rect key="frame" x="534" y="28" width="46" height="46"/>
+                                <rect key="frame" x="566" y="28" width="14" height="22"/>
                                 <state key="normal" image="add"/>
                                 <connections>
                                     <action selector="AddCamera" destination="cUQ-BB-44u" eventType="touchUpInside" id="23N-w6-YEL"/>
@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVM-af-Te1">
-                                <rect key="frame" x="146" y="199.5" width="117" height="117"/>
+                                <rect key="frame" x="146" y="199" width="117" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lVM-af-Te1" secondAttribute="height" multiplier="1:1" id="AqX-M1-0dG"/>
                                 </constraints>
@@ -63,7 +63,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDv-98-OjA">
-                                <rect key="frame" x="337" y="199.5" width="117" height="117"/>
+                                <rect key="frame" x="337" y="199" width="117" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="oDv-98-OjA" secondAttribute="height" multiplier="1:1" id="zcP-ek-VXT"/>
                                 </constraints>
@@ -73,19 +73,19 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YnO-eA-F7h">
-                                <rect key="frame" x="271" y="199.5" width="58.5" height="117"/>
+                                <rect key="frame" x="271" y="199" width="58.5" height="117"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UY-Vi-Ndm">
-                                <rect key="frame" x="21" y="199.5" width="117" height="117"/>
+                                <rect key="frame" x="21" y="199" width="117" height="117"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcX-Do-2PX">
-                                <rect key="frame" x="462" y="199.5" width="117" height="117"/>
+                                <rect key="frame" x="462" y="199" width="117" height="117"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nws-8d-AHw">
-                                <rect key="frame" x="242" y="324.5" width="117" height="117"/>
+                                <rect key="frame" x="242" y="324" width="117" height="117"/>
                                 <state key="normal" image="camera4"/>
                                 <connections>
                                     <action selector="camera4" destination="cUQ-BB-44u" eventType="touchUpInside" id="uLt-DZ-vgO"/>
@@ -153,7 +153,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add" width="46" height="46"/>
+        <image name="add" width="14" height="14"/>
         <image name="camera1" width="163" height="163"/>
         <image name="camera2" width="115" height="115"/>
         <image name="camera3" width="117" height="117"/>
