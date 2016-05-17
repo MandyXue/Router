@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import AVOSCloud
 
 class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate {
     
     // MARK: - Data Source
     
-    var recommendFriends: [NSDictionary] = []
-    var allFriends: [NSDictionary] = []
+    var recommendFriends: [AVUser] = []
+    var allFriends: [AVUser] = []
     
     // MARK: - IBOutlet
     
@@ -60,9 +61,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
             return cell!
         default:
             let cell = tableView.dequeueReusableCellWithIdentifier("AllFriendCell") as! AllFriendTableViewCell
-            cell.nameLabel.text = allFriends[indexPath.row-2]["name"] as? String
-            cell.distanceLabel.text = allFriends[indexPath.row-2]["distance"] as? String
-            
+            cell.friend = allFriends[indexPath.row-2]
             return cell
         }
     }
@@ -88,9 +87,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("RecommendCollection", forIndexPath: indexPath) as! RecommendCollectionViewCell
-        cell.nameLabel.text = recommendFriends[indexPath.row]["name"] as? String
-        cell.stateLabel.text = recommendFriends[indexPath.row]["state"] as? String
-        cell.distanceLabel.text = recommendFriends[indexPath.row]["distance"] as? String
+        cell.friend = recommendFriends[indexPath.row]
         return cell
     }
     
@@ -101,12 +98,38 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     // MARK: - Helper
     
     func prepareData() {
-        // test data
-        for i in 1...10 {
-            recommendFriends.append(["name":"推荐\(i)", "distance":"<\(i)km", "state":"离线"])
-        }
-        for i in 1...20 {
-            allFriends.append(["name":"所有\(i)", "distance":"<\(i)km"])
-        }
+        // lean cloud
+        // recommend
+        let userQuery = AVQuery(className: "_User")
+        userQuery.findObjectsInBackgroundWithBlock({(objects:[AnyObject]!, error:NSError!) -> Void in
+            if (error == nil) {
+                for object in objects {
+                    if let user = object as? AVUser {
+                        if user.username != AVUser.currentUser().username {
+                            self.recommendFriends.append(user)
+                        }
+                    }
+                }
+                self.tableView.reloadData()
+            } else {
+                print("there is error")
+            }
+        })
+        // friends
+        let friendQuery = FriendModel.query()
+        friendQuery.findObjectsInBackgroundWithBlock({(objects:[AnyObject]!, error:NSError!) -> Void in
+            if (error == nil) {
+                for object in objects {
+                    if let user = object as? FriendModel {
+                        if (user.user?.objectId == AVUser.currentUser().objectId && user.friend != nil) {
+                            self.allFriends.append(user.friend!)
+                        }
+                    }
+                }
+                self.tableView.reloadData()
+            } else {
+                print("there is error")
+            }
+        })
     }
 }

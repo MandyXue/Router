@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // leancloud
+        FriendModel.registerSubclass()
         AVOSCloud.setApplicationId("iWaypu9VwqVYN1zATmCcrXGV-gzGzoHsz", clientKey: "d1AAJY5E1oidiFplcbKxAShw")
         AVAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         let  initialViewController = DispatchController.dispatchToMain()
