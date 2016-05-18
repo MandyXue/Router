@@ -73,9 +73,17 @@ class AAMessageViewController: JSQMessagesViewController, UIActionSheetDelegate 
         print("deleteAction")
     }
     
-    override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
+    override func didPressSendButton(button: UIButton!, withMessageText text: String!,
+                                                     senderId: String!,
+                                                     senderDisplayName: String!,
+                                                     date: NSDate!) {
         print("didPressSendButton")
         //TODO:
+        let message = JSQMessage(senderId: senderId,
+                                 senderDisplayName: senderDisplayName,
+                                 date: date, text: text)
+        self.demoData.messages.addObject(message)
+        self.finishSendingMessageAnimated(true)
     }
     
     override func didPressAccessoryButton(sender: UIButton!) {
