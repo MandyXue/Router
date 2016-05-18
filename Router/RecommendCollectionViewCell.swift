@@ -11,7 +11,7 @@ import AVOSCloud
 
 class RecommendCollectionViewCell: UICollectionViewCell {
     
-    var friend = AVUser() {
+    var friend = RouterUser() {
         didSet{
             updateUI()
         }
@@ -33,7 +33,7 @@ class RecommendCollectionViewCell: UICollectionViewCell {
             }
         }
         let friendId = friend.objectId
-        let userId = AVUser.currentUser().objectId
+        let userId = RouterUser.currentUser().objectId
         let follow = AVObject(className: "Friends")
         follow.setObject(AVObject(className: "_User", objectId: friendId), forKey: "friend")
         follow.setObject(AVObject(className: "_User", objectId: userId), forKey: "user")
@@ -59,7 +59,15 @@ class RecommendCollectionViewCell: UICollectionViewCell {
     }
     
     func updateUI() {
-        avatarImageView.image = UIImage(named: "avatar")
+        AVFile.getFileWithObjectId(friend.avatar?.objectId) { (file: AVFile!, error: NSError!) in
+            if (error == nil) {
+                let data = file.getData()
+                let image = UIImage(data: data)
+                self.avatarImageView.image = image
+            } else {
+                print(error)
+            }
+        }
         nameLabel.text = friend.username
         distanceLabel.text = "<1km"
     }

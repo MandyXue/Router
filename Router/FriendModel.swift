@@ -35,7 +35,7 @@ class FriendModel: AVObject, AVSubclassing {
     //例如，Student这个子类里有一个Property，“name“
     //在OC里的@Dynamic，Swift里应该用@NSManaged
     //请确保 Key Name 和 @NSManaged var 一致，并且不要漏掉 @NSManaged
-    @NSManaged var friend: AVUser?
-    @NSManaged var user: AVUser?
+    @NSManaged var friend: RouterUser?
+    @NSManaged var user: RouterUser?
     
 }

@@ -11,7 +11,7 @@ import AVOSCloud
 
 class FriendDetailViewController: UIViewController {
     
-    var user = AVUser()
+    var user = RouterUser()
     
     // MARK: - IBActions
     @IBOutlet weak var avatarImageView: UIImageView!
@@ -27,8 +27,18 @@ class FriendDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // set UI
-        nameLabel.text = user.username
         self.title = user.username
+        nameLabel.text = user.username
+        carTypeLabel.text = user.carType
+        AVFile.getFileWithObjectId(user.avatar?.objectId) { (file: AVFile!, error: NSError!) in
+            if (error == nil) {
+                let data = file.getData()
+                let image = UIImage(data: data)
+                self.avatarImageView.image = image
+            } else {
+                print(error)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
