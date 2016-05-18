@@ -28,10 +28,4 @@ class WelcomeViewController: UIViewController {
         UIButton.defaultStyle(LoginButton)
     }
 
-//MARK:- Action
-    @IBAction func SignUp() {
-    }
-    
-    @IBAction func SignIn() {
-    }
 }

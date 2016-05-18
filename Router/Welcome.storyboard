@@ -53,7 +53,6 @@
                                     <color key="titleColor" red="0.97647058819999999" green="0.98431372549999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="SignUp" destination="uVw-Iz-tdP" eventType="touchUpInside" id="Nsn-nt-3I8"/>
                                     <segue destination="L0I-7W-oed" kind="presentation" id="NMJ-DF-DzT"/>
                                 </connections>
                             </button>
@@ -84,7 +83,6 @@
                                     <color key="titleColor" red="0.97647058819999999" green="0.98431372549999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="SignIn" destination="uVw-Iz-tdP" eventType="touchUpInside" id="Gtg-uf-bMM"/>
                                     <segue destination="Zbz-EP-192" kind="presentation" id="pvb-it-BJx"/>
                                 </connections>
                             </button>
