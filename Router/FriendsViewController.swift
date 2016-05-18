@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import AVOSCloud
+import MBProgressHUD
 
 class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate {
     
     // MARK: - Data Source
     
-    var recommendFriends: [NSDictionary] = []
-    var allFriends: [NSDictionary] = []
+    var recommendFriends: [AVUser] = []
+    var allFriends: [AVUser] = []
     
     // MARK: - IBOutlet
     
@@ -60,9 +62,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
             return cell!
         default:
             let cell = tableView.dequeueReusableCellWithIdentifier("AllFriendCell") as! AllFriendTableViewCell
-            cell.nameLabel.text = allFriends[indexPath.row-2]["name"] as? String
-            cell.distanceLabel.text = allFriends[indexPath.row-2]["distance"] as? String
-            
+            cell.friend = allFriends[indexPath.row-2]
             return cell
         }
     }
@@ -88,9 +88,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("RecommendCollection", forIndexPath: indexPath) as! RecommendCollectionViewCell
-        cell.nameLabel.text = recommendFriends[indexPath.row]["name"] as? String
-        cell.stateLabel.text = recommendFriends[indexPath.row]["state"] as? String
-        cell.distanceLabel.text = recommendFriends[indexPath.row]["distance"] as? String
+        cell.friend = recommendFriends[indexPath.row]
         return cell
     }
     
@@ -100,13 +98,81 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // MARK: - Helper
     
-    func prepareData() {
-        // test data
-        for i in 1...10 {
-            recommendFriends.append(["name":"推荐\(i)", "distance":"<\(i)km", "state":"离线"])
+    func selectRecommends() {
+        for friend in allFriends {
+            var i = 0
+            for recommendFriend in recommendFriends {
+                if recommendFriend.objectId == friend.objectId {
+                    self.recommendFriends.removeAtIndex(i)
+                }
+                i = i + 1
+            }
         }
-        for i in 1...20 {
-            allFriends.append(["name":"所有\(i)", "distance":"<\(i)km"])
+        tableView.reloadData()
+    }
+    
+    func prepareData() {
+        // lean cloud
+        var hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.mode = .AnnularDeterminate
+        hud.labelText = "loading"
+        var userFinished = false
+        var friendFinished = true
+        func finish() {
+            if userFinished && friendFinished {
+                hud.hide(true)
+                selectRecommends()
+            }
+        }
+        // recommend
+        let userQuery = AVQuery(className: "_User")
+        userQuery.findObjectsInBackgroundWithBlock({(objects:[AnyObject]!, error:NSError!) -> Void in
+            if (error == nil) {
+                for object in objects {
+                    if let user = object as? AVUser {
+                        if user.username != AVUser.currentUser().username {
+                            self.recommendFriends.append(user)
+                        }
+                    }
+                }
+                userFinished = true
+                finish()
+            } else {
+                print(error)
+            }
+        })
+        // friends
+        let friendQuery = FriendModel.query()
+        friendQuery.findObjectsInBackgroundWithBlock({(objects:[AnyObject]!, error:NSError!) -> Void in
+            if (error == nil) {
+                for object in objects {
+                    if let user = object as? FriendModel {
+                        if (user.user?.objectId == AVUser.currentUser().objectId && user.friend != nil) {
+                            self.allFriends.append(user.friend!)
+                        }
+                    }
+                }
+                friendFinished = true
+                finish()
+            } else {
+                print(error)
+            }
+        })
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "FriendDetailSegue" {
+            if let detailViewController = segue.destinationViewController as? FriendDetailViewController {
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    if let friendCell = tableView.cellForRowAtIndexPath(indexPath) as? AllFriendTableViewCell {
+                        detailViewController.user = friendCell.friend
+                        friendCell.setSelected(false, animated: false)
+                    }
+                }
+            }
         }
     }
+    
 }

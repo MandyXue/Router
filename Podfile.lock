@@ -9,6 +9,10 @@ PODS:
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
   - MBProgressHUD (0.9.2)
+  - PageMenu (1.2.9)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
 
 DEPENDENCIES:
   - AVOSCloudCrashReporting
@@ -16,6 +20,8 @@ DEPENDENCIES:
   - AVOSCloudIM
   - JSQMessagesViewController
   - MBProgressHUD
+  - PageMenu
+  - SDWebImage
 
 SPEC CHECKSUMS:
   AVOSCloud: b789619942a4275e615f8f0782e7475675951b95
@@ -25,5 +31,7 @@ SPEC CHECKSUMS:
   JSQMessagesViewController: 73cab48aa92fc2d512f3b6724f3425cc47a19eb5
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
 
 COCOAPODS: 0.39.0
