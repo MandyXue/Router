@@ -20,20 +20,4 @@ class DispatchController: NSObject {
             return WelcomeViewController.loadFromStoryboard()
         }
     }
-    
-    class func customerUser() {
-        
-        let user = RouterUser.currentUser()
-        user.carNumber = "ddf"
-        user.carType = "兰博基尼"
-        user.saveInBackgroundWithBlock { (result, error) in
-            if result {
-                print("Save Succeed")
-            }
-            else {
-                print(error)
-            }
-        }
-        
-    }
 }
