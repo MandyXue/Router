@@ -13,7 +13,7 @@ import AVOSCloud
 class DispatchController: NSObject {
     class func dispatchToMain()-> UIViewController {
         if AVUser.currentUser() != nil {
-//            customerUser()
+            customerUser()
             return RootTabBarController.loadFromStoryboard()
         }
         else
@@ -28,6 +28,14 @@ class DispatchController: NSObject {
         AVUser.currentUser().setObject("兰博基尼", forKey: "CarType")
         AVUser.currentUser().setObject("男", forKey: "Gender")
         AVUser.currentUser().setObject("上海市  嘉定区", forKey: "Distict")
-        AVUser.currentUser().saveInBackground()
+        AVUser.currentUser().saveInBackgroundWithBlock { (result, error) in
+            if result {
+                print("Save Succeed")
+            }
+            else {
+                print(error)
+            }
+        }
+        
     }
 }

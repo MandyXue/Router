@@ -22,12 +22,12 @@ class HomeViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "home_background")!)
         self.title = "首页"
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-//        view.backgroundColor = UIColor(patternImage: UIImage(named: "home_background")!)
         configurePageMenu()
     }
     //MARK:- Configure Page Menu
