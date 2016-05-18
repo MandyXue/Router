@@ -165,7 +165,7 @@ class InfoSettingController: UITableViewController,UIImagePickerControllerDelega
             
             return
         }
-        let file = AVFile(data: UIImagePNGRepresentation(chooseImage!))
+        let file = AVFile(data:UIImageJPEGRepresentation(chooseImage!, 0.5))
         let hud =  MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         hud.mode = .Indeterminate
         hud.labelText = "正在上传..."

@@ -11,11 +11,11 @@ import AVOSCloud
 
 class AllFriendTableViewCell: UITableViewCell {
     
-    var friend = AVUser() {
+    var friend = RouterUser() {
         didSet{
             let query = AVQuery(className: "_User")
             query.getObjectInBackgroundWithId(friend.objectId, block: {(object: AnyObject!, error: NSError!) -> Void in
-                if let user = object as? AVUser {
+                if let user = object as? RouterUser {
                     self.friend = user
                     self.updateUI()
                 } else {
@@ -42,7 +42,15 @@ class AllFriendTableViewCell: UITableViewCell {
     }
     
     func updateUI() {
-        avatarImageView.image = UIImage(named: "avatar")
+        AVFile.getFileWithObjectId(friend.avatar?.objectId) { (file: AVFile!, error: NSError!) in
+            if (error == nil) {
+                let data = file.getData()
+                let image = UIImage(data: data)
+                self.avatarImageView.image = image
+            } else {
+                print(error)
+            }
+        }
         nameLabel.text = friend.username
         distanceLabel.text = "<1km"
     }

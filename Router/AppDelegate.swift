@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // leancloud
         FriendModel.registerSubclass()
         RouterUser.registerSubclass()
+        SharingModel.registerSubclass()
         AVOSCloud.setApplicationId("iWaypu9VwqVYN1zATmCcrXGV-gzGzoHsz", clientKey: "d1AAJY5E1oidiFplcbKxAShw")
         AVAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         UIApplication.sharedApplication().windows[0].rootViewController = DispatchController.dispatchToMain()

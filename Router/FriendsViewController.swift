@@ -14,8 +14,8 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // MARK: - Data Source
     
-    var recommendFriends: [AVUser] = []
-    var allFriends: [AVUser] = []
+    var recommendFriends: [RouterUser] = []
+    var allFriends: [RouterUser] = []
     
     // MARK: - IBOutlet
     
@@ -129,8 +129,8 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         userQuery.findObjectsInBackgroundWithBlock({(objects:[AnyObject]!, error:NSError!) -> Void in
             if (error == nil) {
                 for object in objects {
-                    if let user = object as? AVUser {
-                        if user.username != AVUser.currentUser().username {
+                    if let user = object as? RouterUser {
+                        if user.username != RouterUser.currentUser().username {
                             self.recommendFriends.append(user)
                         }
                     }
@@ -147,7 +147,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
             if (error == nil) {
                 for object in objects {
                     if let user = object as? FriendModel {
-                        if (user.user?.objectId == AVUser.currentUser().objectId && user.friend != nil) {
+                        if (user.user?.objectId == RouterUser.currentUser().objectId && user.friend != nil) {
                             self.allFriends.append(user.friend!)
                         }
                     }
