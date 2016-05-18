@@ -8,6 +8,7 @@
 
 import UIKit
 import AVOSCloud
+import MBProgressHUD
 
 class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -97,8 +98,32 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // MARK: - Helper
     
+    func selectRecommends() {
+        for friend in allFriends {
+            var i = 0
+            for recommendFriend in recommendFriends {
+                if recommendFriend.objectId == friend.objectId {
+                    self.recommendFriends.removeAtIndex(i)
+                }
+                i = i + 1
+            }
+        }
+        tableView.reloadData()
+    }
+    
     func prepareData() {
         // lean cloud
+        var hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.mode = .AnnularDeterminate
+        hud.labelText = "loading"
+        var userFinished = false
+        var friendFinished = true
+        func finish() {
+            if userFinished && friendFinished {
+                hud.hide(true)
+                selectRecommends()
+            }
+        }
         // recommend
         let userQuery = AVQuery(className: "_User")
         userQuery.findObjectsInBackgroundWithBlock({(objects:[AnyObject]!, error:NSError!) -> Void in
@@ -110,9 +135,10 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
                         }
                     }
                 }
-                self.tableView.reloadData()
+                userFinished = true
+                finish()
             } else {
-                print("there is error")
+                print(error)
             }
         })
         // friends
@@ -126,9 +152,10 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
                         }
                     }
                 }
-                self.tableView.reloadData()
+                friendFinished = true
+                finish()
             } else {
-                print("there is error")
+                print(error)
             }
         })
     }
