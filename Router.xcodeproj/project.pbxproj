@@ -40,6 +40,8 @@
 		3356CB1C1CD3C1DD00477610 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB1B1CD3C1DD00477610 /* WelcomeViewController.swift */; };
 		62132C621CEABB9400C79943 /* AAMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62132C611CEABB9400C79943 /* AAMessageViewController.swift */; };
 		62132C641CEAC64000C79943 /* AAMessageDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62132C631CEAC64000C79943 /* AAMessageDataModel.swift */; };
+		622E3D3B1CECAB6000E447DD /* AAFriendListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622E3D3A1CECAB6000E447DD /* AAFriendListTableViewController.swift */; };
+		622E3D3F1CECAD3500E447DD /* AAFriendListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622E3D3E1CECAD3500E447DD /* AAFriendListTableViewCell.swift */; };
 		63AEFA13D44F11751B5C1EBD /* Pods_Router.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAF5C971FEC8F19BC43D791 /* Pods_Router.framework */; };
 		E70313501CECA6C900AC937E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E703134F1CECA6C900AC937E /* MapViewController.swift */; };
 		E7084D731CEC3BA900F53741 /* InfoSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7084D721CEC3BA900F53741 /* InfoSettingController.swift */; };
@@ -98,6 +100,8 @@
 		62132C611CEABB9400C79943 /* AAMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAMessageViewController.swift; sourceTree = "<group>"; };
 		62132C631CEAC64000C79943 /* AAMessageDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAMessageDataModel.swift; sourceTree = "<group>"; };
 		62132C651CEAC99E00C79943 /* jsq_messages_sample.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = jsq_messages_sample.m4a; sourceTree = "<group>"; };
+		622E3D3A1CECAB6000E447DD /* AAFriendListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAFriendListTableViewController.swift; sourceTree = "<group>"; };
+		622E3D3E1CECAD3500E447DD /* AAFriendListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAFriendListTableViewCell.swift; sourceTree = "<group>"; };
 		6EAF5C971FEC8F19BC43D791 /* Pods_Router.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Router.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B354125B2B0F688A901AB6 /* Pods-Router.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Router.release.xcconfig"; path = "Pods/Target Support Files/Pods-Router/Pods-Router.release.xcconfig"; sourceTree = "<group>"; };
 		E703134F1CECA6C900AC937E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -401,7 +405,9 @@
 		3356CAE61CD3B2AA00477610 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				622E3D3E1CECAD3500E447DD /* AAFriendListTableViewCell.swift */,
 				62132C611CEABB9400C79943 /* AAMessageViewController.swift */,
+				622E3D3A1CECAB6000E447DD /* AAFriendListTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -710,6 +716,7 @@
 			files = (
 				3356CB091CD3B87B00477610 /* SettingTableViewController.swift in Sources */,
 				3356CB0D1CD3B8E400477610 /* FriendsViewController.swift in Sources */,
+				622E3D3B1CECAB6000E447DD /* AAFriendListTableViewController.swift in Sources */,
 				62132C641CEAC64000C79943 /* AAMessageDataModel.swift in Sources */,
 				332C6B5F1CEC827B001D9868 /* DetailCollectionViewCell.swift in Sources */,
 				3356CB031CD3B63D00477610 /* UIStoryboardManager.swift in Sources */,
@@ -730,6 +737,7 @@
 				E727AA251CEC502F000EBABE /* RouterUser.swift in Sources */,
 				332C6B5D1CEC7F58001D9868 /* SharingModel.swift in Sources */,
 				E727AA271CEC586D000EBABE /* EditInfoViewController.swift in Sources */,
+				622E3D3F1CECAD3500E447DD /* AAFriendListTableViewCell.swift in Sources */,
 				3356CB011CD3B5A700477610 /* DispatchController.swift in Sources */,
 				3356CB1C1CD3C1DD00477610 /* WelcomeViewController.swift in Sources */,
 				33456FB51CE9B35D0025DEC7 /* AllFriendTableViewCell.swift in Sources */,
