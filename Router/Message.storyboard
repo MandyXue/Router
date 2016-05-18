@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fdw-d8-Fj8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="333-uJ-IRO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Message View Controller-->
@@ -21,7 +22,91 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xro-pu-HeN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="287" y="1093"/>
+            <point key="canvasLocation" x="767" y="1166"/>
+        </scene>
+        <!--Friend List Table View Controller-->
+        <scene sceneID="dLd-v1-dMw">
+            <objects>
+                <tableViewController restorationIdentifier="AAFriendListTableViewController" storyboardIdentifier="AAFriendListTableViewController" id="333-uJ-IRO" customClass="AAFriendListTableViewController" customModule="Router" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sem-of-SQf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AAFriendListTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="AAFriendListTableViewCell" rowHeight="100" id="Ogk-ME-Tbf" customClass="AAFriendListTableViewCell" customModule="Router" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ogk-ME-Tbf" id="vhD-od-EWg">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="ubp-1k-8Jl">
+                                            <rect key="frame" x="23" y="30" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="V6a-aq-mUr"/>
+                                                <constraint firstAttribute="width" constant="40" id="Vzu-AT-My5"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="20"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是你爸爸" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKK-ek-Ylv">
+                                            <rect key="frame" x="83" y="20" width="80" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最近一条聊天记录最近一条聊天记录最近一条聊天记录最近一条聊天记录..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4De-oD-QQG">
+                                            <rect key="frame" x="83" y="64" width="494" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015年12月3日 18:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlR-j6-S97">
+                                            <rect key="frame" x="449" y="22" width="128" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.53725490196078429" green="0.53725490196078429" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ubp-1k-8Jl" firstAttribute="centerY" secondItem="vhD-od-EWg" secondAttribute="centerY" id="BCi-Om-JZk"/>
+                                        <constraint firstItem="xlR-j6-S97" firstAttribute="centerY" secondItem="dKK-ek-Ylv" secondAttribute="centerY" id="GQe-8h-bZl"/>
+                                        <constraint firstItem="dKK-ek-Ylv" firstAttribute="top" secondItem="ubp-1k-8Jl" secondAttribute="top" constant="-10" id="IoA-l2-s5n"/>
+                                        <constraint firstItem="dKK-ek-Ylv" firstAttribute="leading" secondItem="ubp-1k-8Jl" secondAttribute="trailing" constant="20" id="KUC-L6-fDC"/>
+                                        <constraint firstItem="4De-oD-QQG" firstAttribute="bottom" secondItem="ubp-1k-8Jl" secondAttribute="bottom" constant="10" id="ZDK-nj-74D"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="4De-oD-QQG" secondAttribute="bottom" id="aNi-IA-iMF"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="xlR-j6-S97" secondAttribute="trailing" constant="15" id="jPs-lW-KAx"/>
+                                        <constraint firstItem="4De-oD-QQG" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dKK-ek-Ylv" secondAttribute="bottom" constant="2" id="la7-Fl-xcH"/>
+                                        <constraint firstItem="xlR-j6-S97" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dKK-ek-Ylv" secondAttribute="trailing" constant="20" id="qgX-fk-qNY"/>
+                                        <constraint firstItem="dKK-ek-Ylv" firstAttribute="leading" secondItem="4De-oD-QQG" secondAttribute="leading" id="rEl-fC-wYr"/>
+                                        <constraint firstItem="xlR-j6-S97" firstAttribute="trailing" secondItem="4De-oD-QQG" secondAttribute="trailing" id="tDb-Nt-Lvi"/>
+                                        <constraint firstItem="ubp-1k-8Jl" firstAttribute="leading" secondItem="vhD-od-EWg" secondAttribute="leadingMargin" constant="15" id="x05-df-ad1"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="avator" destination="ubp-1k-8Jl" id="wPf-Qa-KuF"/>
+                                    <outlet property="latestContentLabel" destination="4De-oD-QQG" id="tCw-Qy-VL7"/>
+                                    <outlet property="nameLabel" destination="dKK-ek-Ylv" id="1so-PT-YXS"/>
+                                    <outlet property="timeLabel" destination="xlR-j6-S97" id="WUx-hY-fM0"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="333-uJ-IRO" id="ZHb-Vy-w9p"/>
+                            <outlet property="delegate" destination="333-uJ-IRO" id="2Kr-d4-lq9"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BTz-gK-QsB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9" y="1166"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="avatar" width="100" height="100"/>
+    </resources>
 </document>
