@@ -13,15 +13,31 @@ typealias JSQLocationMediaItemCompletionBlock = ()-> Void
 
 class AAMessageDataModel: NSObject {
     
+    static let kJSQDemoAvatarDisplayNameSquires = "Jesse Squires"
+    static let kJSQDemoAvatarIdSquires = "053496-4509-289"
+    
     var messages = NSMutableArray()
     var avatars = NSDictionary()
-    var outgoingBubbleImageData = JSQMessagesBubbleImage()
-    var incomingBubbleImageData = JSQMessagesBubbleImage()
+    var outgoingBubbleImageData : JSQMessagesBubbleImage!
+    var incomingBubbleImageData : JSQMessagesBubbleImage!
     var users = NSDictionary()
     
     override init() {
         super.init()
         loadFakeMessages()
+        
+        //avator
+//        let avator = JSQMessagesAvatarImageFactory.avatarImageWithUserInitials("avator", backgroundColor: UIColor.init(white: 0.85, alpha: 1.0),
+//                                                                               textColor: UIColor.init(white: 0.60, alpha: 1.0), font: UIFont.systemFontOfSize(14), diameter: kJSQMessagesCollectionViewAvatarSizeDefault)
+        let avator = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "avatar"), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+        self.avatars = [AAMessageDataModel.kJSQDemoAvatarDisplayNameSquires: avator]
+        
+        self.users = [AAMessageDataModel.kJSQDemoAvatarIdSquires: AAMessageDataModel.kJSQDemoAvatarDisplayNameSquires]
+        
+        let bubbleFactory = JSQMessagesBubbleImageFactory()
+        
+        self.outgoingBubbleImageData = bubbleFactory.outgoingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleLightGrayColor())
+        self.incomingBubbleImageData = bubbleFactory.incomingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleGreenColor())
     }
     
     func loadFakeMessages() {
