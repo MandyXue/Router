@@ -35,6 +35,7 @@
 		3356CB1A1CD3C1C800477610 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CB191CD3C1C800477610 /* Welcome.storyboard */; };
 		3356CB1C1CD3C1DD00477610 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB1B1CD3C1DD00477610 /* WelcomeViewController.swift */; };
 		62132C621CEABB9400C79943 /* AAMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62132C611CEABB9400C79943 /* AAMessageViewController.swift */; };
+		62132C641CEAC64000C79943 /* AAMessageDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62132C631CEAC64000C79943 /* AAMessageDataModel.swift */; };
 		63AEFA13D44F11751B5C1EBD /* Pods_Router.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAF5C971FEC8F19BC43D791 /* Pods_Router.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,8 @@
 		3356CB191CD3C1C800477610 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		3356CB1B1CD3C1DD00477610 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		62132C611CEABB9400C79943 /* AAMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAMessageViewController.swift; sourceTree = "<group>"; };
+		62132C631CEAC64000C79943 /* AAMessageDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAMessageDataModel.swift; sourceTree = "<group>"; };
+		62132C651CEAC99E00C79943 /* jsq_messages_sample.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = jsq_messages_sample.m4a; sourceTree = "<group>"; };
 		6EAF5C971FEC8F19BC43D791 /* Pods_Router.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Router.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B354125B2B0F688A901AB6 /* Pods-Router.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Router.release.xcconfig"; path = "Pods/Target Support Files/Pods-Router/Pods-Router.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,6 +197,8 @@
 		3356CAD21CD3B0C200477610 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				62132C651CEAC99E00C79943 /* jsq_messages_sample.m4a */,
+				62132C631CEAC64000C79943 /* AAMessageDataModel.swift */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -678,6 +683,7 @@
 			files = (
 				3356CB091CD3B87B00477610 /* SettingTableViewController.swift in Sources */,
 				3356CB0D1CD3B8E400477610 /* FriendsViewController.swift in Sources */,
+				62132C641CEAC64000C79943 /* AAMessageDataModel.swift in Sources */,
 				3356CB031CD3B63D00477610 /* UIStoryboardManager.swift in Sources */,
 				3356CB151CD3B9A200477610 /* LoginTableViewController.swift in Sources */,
 				33456FB71CE9B36E0025DEC7 /* RecommendTableViewCell.swift in Sources */,
