@@ -23,6 +23,7 @@ class WelcomeViewController: UIViewController {
 // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.sharedApplication().windows[0].rootViewController = DispatchController.dispatchToMain()
         view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         UIButton.defaultStyle(RegisterButton)
         UIButton.defaultStyle(LoginButton)

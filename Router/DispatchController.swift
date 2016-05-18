@@ -12,8 +12,7 @@ import AVOSCloud
 
 class DispatchController: NSObject {
     class func dispatchToMain()-> UIViewController {
-        if AVUser.currentUser() != nil {
- //           customerUser()
+        if RouterUser.currentUser() != nil {
             return RootTabBarController.loadFromStoryboard()
         }
         else
@@ -24,11 +23,10 @@ class DispatchController: NSObject {
     
     class func customerUser() {
         
-        RouterUser.currentUser().CarNumber = "ddf"
-        RouterUser.currentUser().CarType = "兰博基尼"
-        RouterUser.currentUser().Gender = "男"
-        RouterUser.currentUser().Distict = "上海市  嘉定区"
-        RouterUser.currentUser().saveInBackgroundWithBlock { (result, error) in
+        let user = RouterUser.currentUser()
+        user.carNumber = "ddf"
+        user.carType = "兰博基尼"
+        user.saveInBackgroundWithBlock { (result, error) in
             if result {
                 print("Save Succeed")
             }

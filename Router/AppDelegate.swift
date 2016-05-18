@@ -21,9 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RouterUser.registerSubclass()
         AVOSCloud.setApplicationId("iWaypu9VwqVYN1zATmCcrXGV-gzGzoHsz", clientKey: "d1AAJY5E1oidiFplcbKxAShw")
         AVAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
-        let  initialViewController = DispatchController.dispatchToMain()
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
+//        let initialViewController = DispatchController.dispatchToMain()
+//        self.window?.rootViewController = initialViewController
+//        self.window?.makeKeyAndVisible()
         // set navigation bar style
         let navigationBarAppearance = UINavigationBar.appearance()
         navigationBarAppearance.tintColor = UIColor.whiteColor()

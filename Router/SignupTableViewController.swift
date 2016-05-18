@@ -72,7 +72,7 @@ class SignupTableViewController: UITableViewController {
             return
         }
         
-        let user = AVUser()
+        let user = RouterUser()
         user.username = username.text
         user.password = password.text
         user.email = mailText.text

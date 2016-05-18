@@ -66,7 +66,7 @@ class LoginTableViewController: UITableViewController,UITextFieldDelegate{
             return
         }
         
-        AVUser.logInWithUsernameInBackground(Username.text, password: Password.text) { (user, error) in
+        RouterUser.logInWithUsernameInBackground(Username.text, password: Password.text) { (user, error) in
             if (user != nil)
             {
                 hud.mode = .CustomView
