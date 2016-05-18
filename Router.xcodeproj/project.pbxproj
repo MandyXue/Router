@@ -12,6 +12,7 @@
 		330476F11CCFD587006302F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330476EF1CCFD587006302F5 /* LaunchScreen.storyboard */; };
 		330476FC1CCFD587006302F5 /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330476FB1CCFD587006302F5 /* RouterTests.swift */; };
 		332C6B571CEB6CAA001D9868 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C6B561CEB6CAA001D9868 /* FriendModel.swift */; };
+		332C6B591CEC3DF5001D9868 /* FriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C6B581CEC3DF5001D9868 /* FriendDetailViewController.swift */; };
 		33456FB51CE9B35D0025DEC7 /* AllFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33456FB41CE9B35D0025DEC7 /* AllFriendTableViewCell.swift */; };
 		33456FB71CE9B36E0025DEC7 /* RecommendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33456FB61CE9B36E0025DEC7 /* RecommendTableViewCell.swift */; };
 		33456FB91CEA15030025DEC7 /* RecommendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33456FB81CEA15030025DEC7 /* RecommendCollectionViewCell.swift */; };
@@ -61,6 +62,7 @@
 		330476FB1CCFD587006302F5 /* RouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
 		330476FD1CCFD587006302F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		332C6B561CEB6CAA001D9868 /* FriendModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
+		332C6B581CEC3DF5001D9868 /* FriendDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailViewController.swift; sourceTree = "<group>"; };
 		33456FB41CE9B35D0025DEC7 /* AllFriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllFriendTableViewCell.swift; sourceTree = "<group>"; };
 		33456FB61CE9B36E0025DEC7 /* RecommendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendTableViewCell.swift; sourceTree = "<group>"; };
 		33456FB81CEA15030025DEC7 /* RecommendCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 			children = (
 				33456FB31CE9B33D0025DEC7 /* Cells */,
 				3356CB0C1CD3B8E400477610 /* FriendsViewController.swift */,
+				332C6B581CEC3DF5001D9868 /* FriendDetailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -700,6 +703,7 @@
 				3356CB011CD3B5A700477610 /* DispatchController.swift in Sources */,
 				3356CB1C1CD3C1DD00477610 /* WelcomeViewController.swift in Sources */,
 				33456FB51CE9B35D0025DEC7 /* AllFriendTableViewCell.swift in Sources */,
+				332C6B591CEC3DF5001D9868 /* FriendDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -159,4 +159,20 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
         })
     }
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "FriendDetailSegue" {
+            if let detailViewController = segue.destinationViewController as? FriendDetailViewController {
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    if let friendCell = tableView.cellForRowAtIndexPath(indexPath) as? AllFriendTableViewCell {
+                        detailViewController.user = friendCell.friend
+                        friendCell.setSelected(false, animated: false)
+                    }
+                }
+            }
+        }
+    }
+    
 }
