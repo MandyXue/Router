@@ -28,32 +28,29 @@ class InfoSettingController: UITableViewController {
     }
     
     func setInfo() {
-        usernameLabel.text = AVUser.currentUser().username
-        let url = NSURL(string: (AVUser.currentUser().valueForKey("Avatar") as? String)! )
+        usernameLabel.text = RouterUser.currentUser().username
+        let url = NSURL(string: (RouterUser.currentUser().valueForKey("Avatar") as? String)! )
         avatar.sd_setImageWithURL(url, placeholderImage: UIImage(named: "avatar"))
-        carNumber.text = AVUser.currentUser().valueForKey("CarNumber") as? String
-        carType.text = AVUser.currentUser().valueForKey("CarType") as? String
-        email.text = AVUser.currentUser().email
-        phone.text = AVUser.currentUser().mobilePhoneNumber
-        gender.text = AVUser.currentUser().valueForKey("Gender") as? String
-        distict.text = AVUser.currentUser().valueForKey("Distict") as? String
+        carNumber.text = RouterUser.currentUser().valueForKey("CarNumber") as? String
+        carType.text = RouterUser.currentUser().valueForKey("CarType") as? String
+        email.text = RouterUser.currentUser().email
+        phone.text = RouterUser.currentUser().mobilePhoneNumber
+        gender.text = RouterUser.currentUser().valueForKey("Gender") as? String
+        distict.text = RouterUser.currentUser().valueForKey("Distict") as? String
     }
     
     //MARK:- Delegate
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let vc = storyboard?.instantiateViewControllerWithIdentifier("editInfo") as! EditInfoViewController
         if indexPath.section == 0 {
             switch indexPath.row {
             case 0:
                 print("Avatar")
                 break
             case 1:
-                print("name")
-                break
-            case 2:
-                print("CarNumber")
-                break
-            case 3:
-                print("CarType")
+                vc.title = "修改用户名"
+                vc.info = usernameLabel.text
+                navigationController?.pushViewController(vc, animated: true)
                 break
             default:break
             }
@@ -61,16 +58,24 @@ class InfoSettingController: UITableViewController {
         else {
             switch indexPath.row {
             case 0:
-                print("email")
+                vc.title = "修改邮箱"
+                vc.info = email.text
+                navigationController?.pushViewController(vc, animated: true)
                 break
             case 1:
-                print("phone")
+                vc.title = "修改手机号"
+                vc.info = phone.text
+                navigationController?.pushViewController(vc, animated: true)
                 break
             case 2:
-                print("gender")
+                vc.title = "修改性别"
+                vc.info = gender.text
+                navigationController?.pushViewController(vc, animated: true)
                 break
             case 3:
-                print("distict")
+                vc.title = "修改地区"
+                vc.info = distict.text
+                navigationController?.pushViewController(vc, animated: true)
                 break
             default:break
             }

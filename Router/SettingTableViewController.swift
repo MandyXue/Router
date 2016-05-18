@@ -29,15 +29,15 @@ class SettingTableViewController: UITableViewController {
         super.viewDidLoad()
         self.title = "设置"
         avatar.layer.cornerRadius = 10
-//     setUerInfo()
+//      setUerInfo()
         tableView.tableFooterView = UIView(frame: CGRectZero)
         tableView.backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
     }
     
     func setUerInfo()  {
-        username.text = AVUser.currentUser().username
-        carNumber.text = "车牌号：\((AVUser.currentUser().valueForKey("CarNumber") as! String))"
-        let url = NSURL(string: AVUser.currentUser().valueForKey("Avatar") as! String )
+        username.text = RouterUser.currentUser().username
+        carNumber.text = "车牌号：\((RouterUser.currentUser().valueForKey("CarNumber") as! String))"
+        let url = NSURL(string: RouterUser.currentUser().valueForKey("Avatar") as! String )
         print(url)
         avatar.sd_setImageWithURL(url, placeholderImage: UIImage(named: "avatar"))
     }

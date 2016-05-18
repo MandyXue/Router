@@ -41,6 +41,7 @@
 		63AEFA13D44F11751B5C1EBD /* Pods_Router.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAF5C971FEC8F19BC43D791 /* Pods_Router.framework */; };
 		E7084D731CEC3BA900F53741 /* InfoSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7084D721CEC3BA900F53741 /* InfoSettingController.swift */; };
 		E727AA251CEC502F000EBABE /* RouterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E727AA241CEC502F000EBABE /* RouterUser.swift */; };
+		E727AA271CEC586D000EBABE /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E727AA261CEC586D000EBABE /* EditInfoViewController.swift */; };
 		E74EE81B1CEAB66100EA8CB0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74EE81A1CEAB66100EA8CB0 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		D9B354125B2B0F688A901AB6 /* Pods-Router.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Router.release.xcconfig"; path = "Pods/Target Support Files/Pods-Router/Pods-Router.release.xcconfig"; sourceTree = "<group>"; };
 		E7084D721CEC3BA900F53741 /* InfoSettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoSettingController.swift; sourceTree = "<group>"; };
 		E727AA241CEC502F000EBABE /* RouterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterUser.swift; sourceTree = "<group>"; };
+		E727AA261CEC586D000EBABE /* EditInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
 		E74EE81A1CEAB66100EA8CB0 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -341,6 +343,7 @@
 			children = (
 				3356CB081CD3B87B00477610 /* SettingTableViewController.swift */,
 				E7084D721CEC3BA900F53741 /* InfoSettingController.swift */,
+				E727AA261CEC586D000EBABE /* EditInfoViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -714,6 +717,7 @@
 				332C6B571CEB6CAA001D9868 /* FriendModel.swift in Sources */,
 				E74EE81B1CEAB66100EA8CB0 /* CameraViewController.swift in Sources */,
 				E727AA251CEC502F000EBABE /* RouterUser.swift in Sources */,
+				E727AA271CEC586D000EBABE /* EditInfoViewController.swift in Sources */,
 				3356CB011CD3B5A700477610 /* DispatchController.swift in Sources */,
 				3356CB1C1CD3C1DD00477610 /* WelcomeViewController.swift in Sources */,
 				33456FB51CE9B35D0025DEC7 /* AllFriendTableViewCell.swift in Sources */,
