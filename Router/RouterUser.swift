@@ -35,10 +35,11 @@ class RouterUser: AVUser {
     //例如，Student这个子类里有一个Property，“name“
     //在OC里的@Dynamic，Swift里应该用@NSManaged
     //请确保 Key Name 和 @NSManaged var 一致，并且不要漏掉 @NSManaged
-    @NSManaged var CarNumber : String
-    @NSManaged var CarType:String
-    @NSManaged var Gender :String
-    @NSManaged var Distict:String
-    @NSManaged var avatar:AVFile
+    
+    @NSManaged var carNumber: String?
+    @NSManaged var carType: String?
+    @NSManaged var avatar: AVFile?
+    @NSManaged var district: String?
+    @NSManaged var gender: String?
     
 }

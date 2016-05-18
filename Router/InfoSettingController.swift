@@ -31,12 +31,12 @@ class InfoSettingController: UITableViewController {
         usernameLabel.text = RouterUser.currentUser().username
         let url = NSURL(string: (RouterUser.currentUser().valueForKey("Avatar") as? String)! )
         avatar.sd_setImageWithURL(url, placeholderImage: UIImage(named: "avatar"))
-        carNumber.text = RouterUser.currentUser().valueForKey("CarNumber") as? String
-        carType.text = RouterUser.currentUser().valueForKey("CarType") as? String
+        carNumber.text = RouterUser.currentUser().carNumber
+        carType.text = RouterUser.currentUser().carType
         email.text = RouterUser.currentUser().email
         phone.text = RouterUser.currentUser().mobilePhoneNumber
-        gender.text = RouterUser.currentUser().valueForKey("Gender") as? String
-        distict.text = RouterUser.currentUser().valueForKey("Distict") as? String
+        gender.text = RouterUser.currentUser().gender
+        distict.text = RouterUser.currentUser().district 
     }
     
     //MARK:- Delegate

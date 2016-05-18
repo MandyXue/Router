@@ -29,16 +29,31 @@ class SettingTableViewController: UITableViewController {
         super.viewDidLoad()
         self.title = "设置"
         avatar.layer.cornerRadius = 10
-//      setUerInfo()
+       
+        
+        print("==============================")
+        let user = RouterUser.currentUser()
+        user.carNumber = "ddf"
+        user.carType = "兰博基尼"
+        user.saveInBackgroundWithBlock { (result, error) in
+            if result {
+                print("Save Succeed")
+            }
+            else {
+                print(error)
+            }
+        }
+        print(RouterUser.currentUser().carType)
+        //setUerInfo()
         tableView.tableFooterView = UIView(frame: CGRectZero)
         tableView.backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
     }
     
     func setUerInfo()  {
         username.text = RouterUser.currentUser().username
-        carNumber.text = "车牌号：\((RouterUser.currentUser().valueForKey("CarNumber") as! String))"
+        print(RouterUser.currentUser().carNumber)
+       // carNumber.text = "车牌号：\(RouterUser.currentUser().carNumber))"
         let url = NSURL(string: RouterUser.currentUser().valueForKey("Avatar") as! String )
-        print(url)
         avatar.sd_setImageWithURL(url, placeholderImage: UIImage(named: "avatar"))
     }
     
@@ -70,7 +85,7 @@ class SettingTableViewController: UITableViewController {
             }
             break
         case 2:
-            AVUser.logOut()
+            RouterUser.logOut()
             let sb = UIStoryboard(name: "Welcome", bundle: nil)
             presentViewController(sb.instantiateViewControllerWithIdentifier("WelcomeViewController"), animated: true, completion: nil)
             break

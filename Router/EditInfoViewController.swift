@@ -29,9 +29,9 @@ class EditInfoViewController: UITableViewController,UITextFieldDelegate {
         } else if title == "修改手机号" {
             RouterUser.currentUser().mobilePhoneNumber = editInfo.text
         } else if title == "修改性别" {
-            RouterUser.currentUser().Gender = editInfo.text!
+            RouterUser.currentUser().gender = editInfo.text!
         } else {
-            RouterUser.currentUser().Distict = editInfo.text!
+            RouterUser.currentUser().district = editInfo.text!
         }
         
     }

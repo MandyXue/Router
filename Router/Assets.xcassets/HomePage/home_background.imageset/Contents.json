@@ -14,10 +14,10 @@
       "idiom" : "universal",
       "scale" : "3x",
       "filename" : "home_background@3x.png"
-    }
+    },
   ],
   "info" : {
     "version" : 1,
-    "author" : "silver-ux"
+    "author" : "xcode"
   }
 }
