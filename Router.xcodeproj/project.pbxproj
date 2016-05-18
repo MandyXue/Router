@@ -741,6 +741,7 @@
 			files = (
 				3356CB091CD3B87B00477610 /* SettingTableViewController.swift in Sources */,
 				3356CB0D1CD3B8E400477610 /* FriendsViewController.swift in Sources */,
+				332C6B631CEC93AD001D9868 /* AboutUsTableViewCell.swift in Sources */,
 				622E3D3B1CECAB6000E447DD /* AAFriendListTableViewController.swift in Sources */,
 				62132C641CEAC64000C79943 /* AAMessageDataModel.swift in Sources */,
 				332C6B5F1CEC827B001D9868 /* DetailCollectionViewCell.swift in Sources */,
