@@ -126,56 +126,45 @@
                                                                             <constraint firstAttribute="height" constant="1" id="wow-qO-9A1"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="离线" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAK-Dw-Cl6">
-                                                                        <rect key="frame" x="37" y="116" width="26" height="16"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <color key="textColor" red="0.23137254901960785" green="0.48627450980392156" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="message-green" translatesAutoresizingMaskIntoConstraints="NO" id="uw5-ah-MFX">
-                                                                        <rect key="frame" x="76" y="118" width="16" height="10"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="16" id="Hlb-IC-DLF"/>
-                                                                            <constraint firstAttribute="height" constant="10" id="UHK-K0-y0b"/>
-                                                                        </constraints>
-                                                                    </imageView>
+                                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oS8-xr-HUg">
+                                                                        <rect key="frame" x="22" y="119" width="56" height="13"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <state key="normal" title="添加好友">
+                                                                            <color key="titleColor" red="0.23137254900000001" green="0.48627450979999998" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="addFriend:" destination="jnO-KG-Zrc" eventType="touchUpInside" id="ZG7-6I-Fo9"/>
+                                                                        </connections>
+                                                                    </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             </view>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
+                                                                <constraint firstAttribute="bottomMargin" secondItem="oS8-xr-HUg" secondAttribute="bottom" id="1Bo-5a-XVd"/>
                                                                 <constraint firstItem="3qk-DX-E2R" firstAttribute="top" secondItem="jnO-KG-Zrc" secondAttribute="topMargin" constant="5" id="8Y2-1P-aiC"/>
-                                                                <constraint firstItem="GAK-Dw-Cl6" firstAttribute="bottom" secondItem="jnO-KG-Zrc" secondAttribute="bottomMargin" id="Af0-uN-x6n"/>
                                                                 <constraint firstItem="xEk-xa-XWc" firstAttribute="leading" secondItem="jnO-KG-Zrc" secondAttribute="leadingMargin" constant="7" id="AhV-7W-Qf1"/>
                                                                 <constraint firstItem="Zf4-xl-x4B" firstAttribute="top" secondItem="jnO-KG-Zrc" secondAttribute="topMargin" constant="8" id="Eyz-EY-bJv"/>
                                                                 <constraint firstItem="xEk-xa-XWc" firstAttribute="top" secondItem="Hn7-FR-KJb" secondAttribute="bottom" constant="8" symbolic="YES" id="GDh-8d-I3R"/>
                                                                 <constraint firstItem="Gq7-r7-0ej" firstAttribute="centerX" secondItem="jnO-KG-Zrc" secondAttribute="centerX" id="Je7-aa-6Ac"/>
                                                                 <constraint firstItem="Gq7-r7-0ej" firstAttribute="top" secondItem="Zf4-xl-x4B" secondAttribute="bottom" constant="8" symbolic="YES" id="Srg-Nr-8xc"/>
-                                                                <constraint firstItem="GAK-Dw-Cl6" firstAttribute="centerX" secondItem="jnO-KG-Zrc" secondAttribute="centerX" id="WMm-u7-fR4"/>
                                                                 <constraint firstItem="Zf4-xl-x4B" firstAttribute="centerX" secondItem="jnO-KG-Zrc" secondAttribute="centerX" id="WN2-JD-rhA"/>
-                                                                <constraint firstItem="xEk-xa-XWc" firstAttribute="top" secondItem="uw5-ah-MFX" secondAttribute="bottom" id="a5h-6k-AP3"/>
+                                                                <constraint firstItem="oS8-xr-HUg" firstAttribute="top" secondItem="xEk-xa-XWc" secondAttribute="bottom" constant="8" symbolic="YES" id="dJE-1o-nF8"/>
                                                                 <constraint firstItem="Hn7-FR-KJb" firstAttribute="top" secondItem="Gq7-r7-0ej" secondAttribute="bottom" constant="4" id="e4w-fz-J6z"/>
                                                                 <constraint firstItem="Hn7-FR-KJb" firstAttribute="centerX" secondItem="jnO-KG-Zrc" secondAttribute="centerX" id="fI0-Po-eY4"/>
-                                                                <constraint firstAttribute="trailingMargin" secondItem="uw5-ah-MFX" secondAttribute="trailing" id="hBE-n9-lMd"/>
                                                                 <constraint firstAttribute="trailingMargin" secondItem="xEk-xa-XWc" secondAttribute="trailing" constant="7" id="hWJ-Bl-irn"/>
                                                                 <constraint firstAttribute="trailingMargin" secondItem="3qk-DX-E2R" secondAttribute="trailing" constant="5" id="kfd-Kg-xsq"/>
-                                                                <constraint firstItem="uw5-ah-MFX" firstAttribute="centerY" secondItem="GAK-Dw-Cl6" secondAttribute="centerY" id="xBd-4a-3uY"/>
+                                                                <constraint firstItem="oS8-xr-HUg" firstAttribute="centerX" secondItem="jnO-KG-Zrc" secondAttribute="centerX" id="wkO-0I-3sx"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                     <integer key="value" value="5"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
-                                                            <variation key="default">
-                                                                <mask key="constraints">
-                                                                    <exclude reference="a5h-6k-AP3"/>
-                                                                </mask>
-                                                            </variation>
                                                             <connections>
                                                                 <outlet property="avatarImageView" destination="Zf4-xl-x4B" id="mLW-qU-oBB"/>
                                                                 <outlet property="distanceLabel" destination="Hn7-FR-KJb" id="XXn-ol-NuG"/>
                                                                 <outlet property="nameLabel" destination="Gq7-r7-0ej" id="tJS-Ll-Fr3"/>
-                                                                <outlet property="stateLabel" destination="GAK-Dw-Cl6" id="1FC-HB-Q9o"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -345,7 +334,6 @@
     <resources>
         <image name="avatar" width="100" height="100"/>
         <image name="message" width="35" height="35"/>
-        <image name="message-green" width="17" height="11"/>
         <image name="pages" width="3" height="13"/>
     </resources>
 </document>

@@ -7,9 +7,23 @@
 //
 
 import UIKit
+import AVOSCloud
 
 class AllFriendTableViewCell: UITableViewCell {
     
+    var friend = AVUser() {
+        didSet{
+            let query = AVQuery(className: "_User")
+            query.getObjectInBackgroundWithId(friend.objectId, block: {(object: AnyObject!, error: NSError!) -> Void in
+                if let user = object as? AVUser {
+                    self.friend = user
+                    self.updateUI()
+                } else {
+                    print(error)
+                }
+            })
+        }
+    }
 
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -25,6 +39,12 @@ class AllFriendTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func updateUI() {
+        avatarImageView.image = UIImage(named: "avatar")
+        nameLabel.text = friend.username
+        distanceLabel.text = "<1km"
     }
 
 }

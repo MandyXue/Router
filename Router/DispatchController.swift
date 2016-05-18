@@ -13,7 +13,7 @@ import AVOSCloud
 class DispatchController: NSObject {
     class func dispatchToMain()-> UIViewController {
         if AVUser.currentUser() != nil {
-            customerUser()
+//            customerUser()
             return RootTabBarController.loadFromStoryboard()
         }
         else

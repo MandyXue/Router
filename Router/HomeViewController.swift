@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "home_background")!)
+//        view.backgroundColor = UIColor(patternImage: UIImage(named: "home_background")!)
         configurePageMenu()
     }
     //MARK:- Configure Page Menu
