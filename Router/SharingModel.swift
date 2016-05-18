@@ -38,5 +38,5 @@ class SharingModel: AVObject, AVSubclassing {
     @NSManaged var content: String?
     @NSManaged var image: AVFile?
     @NSManaged var user: RouterUser?
-    
+    @NSManaged var username: String?
 }
