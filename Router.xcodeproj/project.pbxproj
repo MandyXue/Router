@@ -207,10 +207,8 @@
 		3356CAD21CD3B0C200477610 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				62132C651CEAC99E00C79943 /* jsq_messages_sample.m4a */,
 				62132C631CEAC64000C79943 /* AAMessageDataModel.swift */,
-=======
 				332C6B561CEB6CAA001D9868 /* FriendModel.swift */,
 				E727AA241CEC502F000EBABE /* RouterUser.swift */,
 			);
