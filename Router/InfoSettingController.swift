@@ -24,7 +24,7 @@ class InfoSettingController: UITableViewController {
     //MARK:- LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setInfo()
+//        setInfo()
     }
     
     func setInfo() {

@@ -29,7 +29,7 @@ class SettingTableViewController: UITableViewController {
         super.viewDidLoad()
         self.title = "设置"
         avatar.layer.cornerRadius = 10
-        setUerInfo()
+//     setUerInfo()
         tableView.tableFooterView = UIView(frame: CGRectZero)
         tableView.backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
     }
