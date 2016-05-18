@@ -11,6 +11,8 @@ import AVOSCloud
 
 class RecommendCollectionViewCell: UICollectionViewCell {
     
+    var updateDelegate: FriendsTableViewDelegate!
+    
     var friend = RouterUser() {
         didSet{
             updateUI()
@@ -30,6 +32,7 @@ class RecommendCollectionViewCell: UICollectionViewCell {
                                         delegate: nil,
                                         cancelButtonTitle: "Ok")
                 alert.show()
+                updateDelegate.updateTableView!()
             }
         }
         let friendId = friend.objectId

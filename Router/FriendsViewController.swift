@@ -10,6 +10,10 @@ import UIKit
 import AVOSCloud
 import MBProgressHUD
 
+@objc protocol FriendsTableViewDelegate: NSObjectProtocol {
+    optional func updateTableView()
+}
+
 class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate {
     
     // MARK: - Data Source
@@ -89,6 +93,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("RecommendCollection", forIndexPath: indexPath) as! RecommendCollectionViewCell
         cell.friend = recommendFriends[indexPath.row]
+        cell.updateDelegate = self
         return cell
     }
     
@@ -98,29 +103,31 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // MARK: - Helper
     
-    func selectRecommends() {
-        for friend in allFriends {
-            var i = 0
-            for recommendFriend in recommendFriends {
-                if recommendFriend.objectId == friend.objectId {
-                    self.recommendFriends.removeAtIndex(i)
-                }
-                i = i + 1
-            }
-        }
-        tableView.reloadData()
-    }
-    
     func prepareData() {
+        recommendFriends = []
+        allFriends = []
         // lean cloud
         var hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         hud.mode = .AnnularDeterminate
         hud.labelText = "loading"
         var userFinished = false
         var friendFinished = true
+        
+        func selectRecommends() {
+            
+            for friend in allFriends {
+                for (index,recommendFriend) in recommendFriends.enumerate() {
+                    if recommendFriend.objectId == friend.objectId {
+                        self.recommendFriends.removeAtIndex(index)
+                    }
+                }
+            }
+            tableView.reloadData()
+            hud.hide(true)
+        }
+        
         func finish() {
             if userFinished && friendFinished {
-                hud.hide(true)
                 selectRecommends()
             }
         }
@@ -175,4 +182,10 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+}
+
+extension FriendsViewController: FriendsTableViewDelegate {
+    func updateTableView() {
+        prepareData()
+    }
 }
