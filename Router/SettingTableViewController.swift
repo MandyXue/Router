@@ -28,7 +28,6 @@ class SettingTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "设置"
-        avatar.layer.cornerRadius = 10
         tableView.tableFooterView = UIView(frame: CGRectZero)
         tableView.backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
     }
@@ -40,7 +39,11 @@ class SettingTableViewController: UITableViewController {
     
     func setUerInfo()  {
         username.text = RouterUser.currentUser().username
-        carNumber.text = "车牌号：\(RouterUser.currentUser().carNumber!)"
+        if let carNum = RouterUser.currentUser().carNumber {
+            carNumber.text = "车牌号：\(carNum)"
+        } else {
+            carNumber.text = "请输入车牌号"
+        }
         AVFile.getFileWithObjectId(RouterUser.currentUser().avatar?.objectId) { (file: AVFile!, error: NSError!) in
             if (error == nil) {
                 let data = file.getData()

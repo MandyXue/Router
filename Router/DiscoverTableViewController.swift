@@ -7,8 +7,14 @@
 //
 
 import UIKit
+import AVOSCloud
+import MBProgressHUD
 
 class DiscoverTableViewController: UITableViewController {
+    
+    var sharings: [SharingModel] = []
+    var usernames: [String] = []
+    var images: [UIImage] = []
     
     // MARK: - BaseViewController
     
@@ -22,6 +28,11 @@ class DiscoverTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "发现"
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        getSharings()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -37,60 +48,66 @@ class DiscoverTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return sharings.count
     }
-
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCellWithIdentifier("DiscoverCell", forIndexPath: indexPath) as! DiscoverTableViewCell
+        
+        cell.username.text = sharings[indexPath.row].username
+        cell.content.text = sharings[indexPath.row].content
+        
+        if indexPath.row < images.count {
+            cell.discoverImage.image = images[indexPath.row]
+        }
+        
+        cell.date.text = dateToString(sharings[indexPath.row].createdAt)
 
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    // MARK: - Helper
+    
+    func dateToString(date: NSDate) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let string = dateFormatter.stringFromDate(date)
+        return string
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func getSharings() {
+        var hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.mode = .AnnularDeterminate
+        hud.labelText = "loading"
+        // recommend
+        let sharingQuery = AVQuery(className: "Sharing")
+        sharingQuery.findObjectsInBackgroundWithBlock({(objects:[AnyObject]!, error:NSError!) -> Void in
+            if (error == nil) {
+                for object in objects {
+                    if let sharing = object as? SharingModel {
+                        self.sharings.append(sharing)
+                        AVFile.getFileWithObjectId(sharing.image?.objectId) { (file: AVFile!, error: NSError!) in
+                            if (error == nil) {
+                                let data = file.getData()
+                                if data != nil {
+                                    let image = UIImage(data: data)
+                                    self.images.append(image!)
+                                }
+                            } else {
+                                print(error)
+                            }
+                            hud.hide(true)
+                            self.tableView.reloadData()
+                        }
+                    }
+                }
+            } else {
+                print(error)
+            }
+        })
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     /*
     // MARK: - Navigation
