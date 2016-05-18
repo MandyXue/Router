@@ -9,9 +9,10 @@
 import UIKit
 import AVOSCloud
 
-class FriendDetailViewController: UIViewController {
+class FriendDetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var user = RouterUser()
+    var images: [UIImage] = []
     
     // MARK: - IBActions
     @IBOutlet weak var avatarImageView: UIImageView!
@@ -26,6 +27,9 @@ class FriendDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // set datasource and delegate
+        collectionView.dataSource = self
+        collectionView.delegate = self
         // set UI
         self.title = user.username
         nameLabel.text = user.username
@@ -39,6 +43,8 @@ class FriendDetailViewController: UIViewController {
                 print(error)
             }
         }
+        // get sharing
+        getSharings()
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,6 +52,50 @@ class FriendDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Collection View Data Source
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("DetailCollectionCell", forIndexPath: indexPath) as! DetailCollectionViewCell
+        cell.image.image = images[indexPath.row]
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return images.count
+    }
+    
+    // MARK: - Helper
+    
+    func getSharings() {
+        // recommend
+        let sharingQuery = AVQuery(className: "Sharing")
+        sharingQuery.findObjectsInBackgroundWithBlock({(objects:[AnyObject]!, error:NSError!) -> Void in
+            if (error == nil) {
+                for object in objects {
+                    if let sharing = object as? SharingModel {
+                        if let objectId = sharing.user?.objectId {
+                            if objectId == self.user.objectId {
+                                AVFile.getFileWithObjectId(sharing.image?.objectId) { (file: AVFile!, error: NSError!) in
+                                    if (error == nil) {
+                                        let data = file.getData()
+                                        if data != nil {
+                                            let image = UIImage(data: data)
+                                            self.images.append(image!)
+                                        }
+                                    } else {
+                                        print(error)
+                                    }
+                                    self.collectionView.reloadData()
+                                }
+                            }
+                        }
+                    }
+                }
+            } else {
+                print(error)
+            }
+        })
+    }
 
     /*
     // MARK: - Navigation
