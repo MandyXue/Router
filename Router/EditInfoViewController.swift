@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class EditInfoViewController: UITableViewController,UITextFieldDelegate {
 
@@ -30,13 +31,36 @@ class EditInfoViewController: UITableViewController,UITextFieldDelegate {
             RouterUser.currentUser().mobilePhoneNumber = editInfo.text
         } else if title == "修改性别" {
             RouterUser.currentUser().gender = editInfo.text!
-        } else {
+        } else if title == "修改地区" {
             RouterUser.currentUser().district = editInfo.text!
+        } else if title == "修改车牌号" {
+            RouterUser.currentUser().carNumber = editInfo.text!
+        } else {
+            RouterUser.currentUser().carType = editInfo.text!
         }
         
+        let hud =  MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.mode = .Indeterminate
+        hud.labelText = "正在保存..."
+        
+        RouterUser.currentUser().saveInBackgroundWithBlock { (result, error) in
+            if result {
+                hud.mode = .CustomView
+                let imageView = UIImage(named: "Checkmark")?.imageWithRenderingMode(.AlwaysTemplate)
+                hud.customView = UIImageView(image:imageView)
+                hud.square = true
+                hud.labelText = "保存成功"
+                hud.hide(true, afterDelay: 1)
+                self.delay(2, closure: {
+                    self.navigationController?.popViewControllerAnimated(true)
+                })
+            }
+            else {
+                print(error)
+                hud.mode = .Text
+                hud.labelText = "手机号码无效"
+                hud.hide(true, afterDelay: 1)
+            }
+        }
     }
-    
-    
-    
-    
 }

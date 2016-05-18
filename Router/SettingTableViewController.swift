@@ -29,32 +29,26 @@ class SettingTableViewController: UITableViewController {
         super.viewDidLoad()
         self.title = "设置"
         avatar.layer.cornerRadius = 10
-       
-        
-        print("==============================")
-        let user = RouterUser.currentUser()
-        user.carNumber = "ddf"
-        user.carType = "兰博基尼"
-        user.saveInBackgroundWithBlock { (result, error) in
-            if result {
-                print("Save Succeed")
-            }
-            else {
-                print(error)
-            }
-        }
-        print(RouterUser.currentUser().carType)
-        //setUerInfo()
         tableView.tableFooterView = UIView(frame: CGRectZero)
         tableView.backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        setUerInfo()
+    }
+    
     func setUerInfo()  {
         username.text = RouterUser.currentUser().username
-        print(RouterUser.currentUser().carNumber)
-       // carNumber.text = "车牌号：\(RouterUser.currentUser().carNumber))"
-        let url = NSURL(string: RouterUser.currentUser().valueForKey("Avatar") as! String )
-        avatar.sd_setImageWithURL(url, placeholderImage: UIImage(named: "avatar"))
+        carNumber.text = "车牌号：\(RouterUser.currentUser().carNumber!)"
+        AVFile.getFileWithObjectId(RouterUser.currentUser().avatar?.objectId) { (file: AVFile!, error: NSError!) in
+            if (error == nil) {
+                let data = file.getData()
+               self.avatar.image = UIImage(data: data)
+            } else {
+                print(error)
+            }
+        }
     }
     
     //MARK:- Delegate
