@@ -84,4 +84,9 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
         return anView
     }
     
+    func mapView(mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
+        search()
+    }
+
+    
 }
