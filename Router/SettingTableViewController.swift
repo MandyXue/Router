@@ -46,7 +46,9 @@ class SettingTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.section {
         case 0:
-            print("修改信息")
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("InfoSetting")
+            vc?.title = "修改信息"
+            navigationController?.pushViewController(vc!, animated: true)
             break
         case 1:
             switch indexPath.row {

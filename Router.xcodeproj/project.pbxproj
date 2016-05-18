@@ -36,6 +36,7 @@
 		3356CB1C1CD3C1DD00477610 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB1B1CD3C1DD00477610 /* WelcomeViewController.swift */; };
 		62132C621CEABB9400C79943 /* AAMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62132C611CEABB9400C79943 /* AAMessageViewController.swift */; };
 		63AEFA13D44F11751B5C1EBD /* Pods_Router.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAF5C971FEC8F19BC43D791 /* Pods_Router.framework */; };
+		E7084D731CEC3BA900F53741 /* InfoSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7084D721CEC3BA900F53741 /* InfoSettingController.swift */; };
 		E74EE81B1CEAB66100EA8CB0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74EE81A1CEAB66100EA8CB0 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		62132C611CEABB9400C79943 /* AAMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAMessageViewController.swift; sourceTree = "<group>"; };
 		6EAF5C971FEC8F19BC43D791 /* Pods_Router.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Router.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B354125B2B0F688A901AB6 /* Pods-Router.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Router.release.xcconfig"; path = "Pods/Target Support Files/Pods-Router/Pods-Router.release.xcconfig"; sourceTree = "<group>"; };
+		E7084D721CEC3BA900F53741 /* InfoSettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoSettingController.swift; sourceTree = "<group>"; };
 		E74EE81A1CEAB66100EA8CB0 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -325,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				3356CB081CD3B87B00477610 /* SettingTableViewController.swift */,
+				E7084D721CEC3BA900F53741 /* InfoSettingController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -687,6 +690,7 @@
 				3356CB051CD3B73700477610 /* UIViewControllerManager.swift in Sources */,
 				33456FB91CEA15030025DEC7 /* RecommendCollectionViewCell.swift in Sources */,
 				3356CAFF1CD3B56800477610 /* RootTabBarController.swift in Sources */,
+				E7084D731CEC3BA900F53741 /* InfoSettingController.swift in Sources */,
 				3356CB131CD3B98700477610 /* SignupTableViewController.swift in Sources */,
 				3356CB111CD3B96800477610 /* HomeViewController.swift in Sources */,
 				62132C621CEABB9400C79943 /* AAMessageViewController.swift in Sources */,
