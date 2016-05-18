@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DiscoverCell" rowHeight="165" id="6J4-oj-Ovl" customClass="DiscoverTableViewCell" customModule="Router" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DiscoverCell" rowHeight="165" id="6J4-oj-Ovl" customClass="DiscoverTableViewCell" customModule="Router" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="165"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6J4-oj-Ovl" id="xdQ-4w-82H">
