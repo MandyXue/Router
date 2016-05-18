@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E64a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1kB-Yw-2Dl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1kB-Yw-2Dl">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -38,7 +38,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSR-mM-4bW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSR-mM-4bW">
                                 <rect key="frame" x="566" y="28" width="14" height="22"/>
                                 <state key="normal" image="add"/>
                                 <connections>
@@ -63,7 +63,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDv-98-OjA">
-                                <rect key="frame" x="337" y="199" width="117" height="117"/>
+                                <rect key="frame" x="338" y="199" width="117" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="oDv-98-OjA" secondAttribute="height" multiplier="1:1" id="zcP-ek-VXT"/>
                                 </constraints>
@@ -73,7 +73,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YnO-eA-F7h">
-                                <rect key="frame" x="271" y="199" width="58.5" height="117"/>
+                                <rect key="frame" x="271" y="199" width="59" height="117"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UY-Vi-Ndm">
@@ -81,7 +81,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcX-Do-2PX">
-                                <rect key="frame" x="462" y="199" width="117" height="117"/>
+                                <rect key="frame" x="463" y="199" width="117" height="117"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nws-8d-AHw">
@@ -131,12 +131,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1a-OB-aZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="287" y="1167"/>
+            <point key="canvasLocation" x="1045" y="901"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="nZt-5d-I06">
             <objects>
-                <viewController storyboardIdentifier="secondController" id="WOt-7r-VQx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="secondController" id="WOt-7r-VQx" customClass="MapViewController" customModule="Router" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YqM-Hd-tTQ"/>
                         <viewControllerLayoutGuide type="bottom" id="EEN-uD-vpt"/>
@@ -144,12 +144,26 @@
                     <view key="view" contentMode="scaleToFill" id="BBx-ZE-VrI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="p4a-uk-2zf">
+                                <rect key="frame" x="4" y="4" width="592" height="596"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.89411764709999997" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="p4a-uk-2zf" firstAttribute="leading" secondItem="BBx-ZE-VrI" secondAttribute="leadingMargin" constant="-16" id="3sq-to-DCf"/>
+                            <constraint firstItem="EEN-uD-vpt" firstAttribute="top" secondItem="p4a-uk-2zf" secondAttribute="bottom" id="9eU-KL-XgP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="p4a-uk-2zf" secondAttribute="trailing" constant="-16" id="Om8-eI-Fnx"/>
+                            <constraint firstItem="p4a-uk-2zf" firstAttribute="top" secondItem="YqM-Hd-tTQ" secondAttribute="bottom" constant="-16" id="tfc-vH-BIK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="p4a-uk-2zf" id="Nic-EO-xR2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lzu-zW-6vY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1324" y="381"/>
+            <point key="canvasLocation" x="1045" y="-39"/>
         </scene>
     </scenes>
     <resources>

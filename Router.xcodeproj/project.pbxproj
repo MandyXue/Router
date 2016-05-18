@@ -41,6 +41,7 @@
 		62132C621CEABB9400C79943 /* AAMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62132C611CEABB9400C79943 /* AAMessageViewController.swift */; };
 		62132C641CEAC64000C79943 /* AAMessageDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62132C631CEAC64000C79943 /* AAMessageDataModel.swift */; };
 		63AEFA13D44F11751B5C1EBD /* Pods_Router.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAF5C971FEC8F19BC43D791 /* Pods_Router.framework */; };
+		E70313501CECA6C900AC937E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E703134F1CECA6C900AC937E /* MapViewController.swift */; };
 		E7084D731CEC3BA900F53741 /* InfoSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7084D721CEC3BA900F53741 /* InfoSettingController.swift */; };
 		E727AA251CEC502F000EBABE /* RouterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E727AA241CEC502F000EBABE /* RouterUser.swift */; };
 		E727AA271CEC586D000EBABE /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E727AA261CEC586D000EBABE /* EditInfoViewController.swift */; };
@@ -99,6 +100,7 @@
 		62132C651CEAC99E00C79943 /* jsq_messages_sample.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = jsq_messages_sample.m4a; sourceTree = "<group>"; };
 		6EAF5C971FEC8F19BC43D791 /* Pods_Router.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Router.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B354125B2B0F688A901AB6 /* Pods-Router.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Router.release.xcconfig"; path = "Pods/Target Support Files/Pods-Router/Pods-Router.release.xcconfig"; sourceTree = "<group>"; };
+		E703134F1CECA6C900AC937E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E7084D721CEC3BA900F53741 /* InfoSettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoSettingController.swift; sourceTree = "<group>"; };
 		E727AA241CEC502F000EBABE /* RouterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterUser.swift; sourceTree = "<group>"; };
 		E727AA261CEC586D000EBABE /* EditInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 			children = (
 				3356CB101CD3B96800477610 /* HomeViewController.swift */,
 				E74EE81A1CEAB66100EA8CB0 /* CameraViewController.swift */,
+				E703134F1CECA6C900AC937E /* MapViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -551,7 +554,7 @@
 				TargetAttributes = {
 					330476E21CCFD587006302F5 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = WGWLK679J7;
+						DevelopmentTeam = T6487GK4ME;
 					};
 					330476F61CCFD587006302F5 = {
 						CreatedOnToolsVersion = 7.2;
@@ -713,6 +716,7 @@
 				3356CB151CD3B9A200477610 /* LoginTableViewController.swift in Sources */,
 				33456FB71CE9B36E0025DEC7 /* RecommendTableViewCell.swift in Sources */,
 				3356CB051CD3B73700477610 /* UIViewControllerManager.swift in Sources */,
+				E70313501CECA6C900AC937E /* MapViewController.swift in Sources */,
 				33456FB91CEA15030025DEC7 /* RecommendCollectionViewCell.swift in Sources */,
 				3356CAFF1CD3B56800477610 /* RootTabBarController.swift in Sources */,
 				E7084D731CEC3BA900F53741 /* InfoSettingController.swift in Sources */,
@@ -851,14 +855,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Router/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = x5hajpg;
+				PRODUCT_BUNDLE_IDENTIFIER = com.router.liuuxodng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -870,14 +876,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Router/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = x5hajpg;
+				PRODUCT_BUNDLE_IDENTIFIER = com.router.liuuxodng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
