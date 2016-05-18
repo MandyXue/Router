@@ -73,6 +73,8 @@ extension AAFriendListTableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailController = AAMessageViewController()
-        
+        detailController.messageIndex = indexPath.row % 4
+        detailController.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(detailController, animated: true)
     }
 }

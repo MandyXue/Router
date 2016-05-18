@@ -19,6 +19,8 @@ class AAMessageViewController: JSQMessagesViewController, UIActionSheetDelegate 
     var displayName: String!
     var displaySenderId: String!
     var demoData: AAMessageDataModel!
+    var name = ""
+    var messageIndex = 0
     
     // MARK: - BaseViewController
     
@@ -30,12 +32,12 @@ class AAMessageViewController: JSQMessagesViewController, UIActionSheetDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        demoData = AAMessageDataModel()
+        demoData = AAMessageDataModel(fakeIndex: messageIndex)
         displaySenderId = AAMessageDataModel.kJSQDemoAvatarIdSquires
         self.senderId = displaySenderId
         displayName = AAMessageDataModel.kJSQDemoAvatarDisplayNameSquires
         self.senderDisplayName = displayName
-        self.title = "聊天"
+        self.title = name
         
         self.inputToolbar.contentView.textView.pasteDelegate = self
         
