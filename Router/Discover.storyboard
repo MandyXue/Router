@@ -114,8 +114,69 @@
             </objects>
             <point key="canvasLocation" x="277" y="468"/>
         </scene>
+        <!--New Discover View Controller-->
+        <scene sceneID="N2c-fZ-8XJ">
+            <objects>
+                <viewController storyboardIdentifier="NewDiscoverViewController" id="bEC-ny-9LZ" customClass="NewDiscoverViewController" customModule="Router" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="izj-gS-JAk"/>
+                        <viewControllerLayoutGuide type="bottom" id="yzl-3q-crH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Sg-1S-Njh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99Q-vU-RjU">
+                                <rect key="frame" x="-47" y="-79" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="这一刻的想法..." translatesAutoresizingMaskIntoConstraints="NO" id="dbk-ej-Qa8">
+                                <rect key="frame" x="20" y="35" width="560" height="138"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="123" id="SZ2-Zg-17n"/>
+                                    <constraint firstAttribute="height" constant="138" id="ec7-pB-THv"/>
+                                </constraints>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="SZ2-Zg-17n"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="添加图片" translatesAutoresizingMaskIntoConstraints="NO" id="fL6-zB-xce">
+                                <rect key="frame" x="20" y="181" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0bc-QV-Waf"/>
+                                    <constraint firstAttribute="height" constant="150" id="Zs5-Sp-NyK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dbk-ej-Qa8" firstAttribute="leading" secondItem="7Sg-1S-Njh" secondAttribute="leadingMargin" id="Cl4-OK-gQN"/>
+                            <constraint firstItem="dbk-ej-Qa8" firstAttribute="top" secondItem="izj-gS-JAk" secondAttribute="bottom" constant="15" id="S2i-kW-MB2"/>
+                            <constraint firstItem="dbk-ej-Qa8" firstAttribute="trailing" secondItem="7Sg-1S-Njh" secondAttribute="trailingMargin" id="dsX-ns-Kyb"/>
+                            <constraint firstItem="fL6-zB-xce" firstAttribute="leading" secondItem="7Sg-1S-Njh" secondAttribute="leadingMargin" id="jgd-uO-BLB"/>
+                            <constraint firstItem="fL6-zB-xce" firstAttribute="top" secondItem="dbk-ej-Qa8" secondAttribute="bottom" constant="8" symbolic="YES" id="sza-Lj-bPg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentTextView" destination="dbk-ej-Qa8" id="AeK-cR-K0h"/>
+                        <outlet property="imageView" destination="fL6-zB-xce" id="4aA-sn-lmi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="quN-zV-Kfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="907" y="468"/>
+        </scene>
     </scenes>
     <resources>
         <image name="avatar" width="100" height="100"/>
+        <image name="添加图片" width="107" height="108"/>
     </resources>
 </document>

@@ -41,6 +41,7 @@
 		3356CB151CD3B9A200477610 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB141CD3B9A200477610 /* LoginTableViewController.swift */; };
 		3356CB1A1CD3C1C800477610 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3356CB191CD3C1C800477610 /* Welcome.storyboard */; };
 		3356CB1C1CD3C1DD00477610 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356CB1B1CD3C1DD00477610 /* WelcomeViewController.swift */; };
+		33E861D81CED74D4007B9940 /* NewDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E861D71CED74D4007B9940 /* NewDiscoverViewController.swift */; };
 		62132C621CEABB9400C79943 /* AAMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62132C611CEABB9400C79943 /* AAMessageViewController.swift */; };
 		62132C641CEAC64000C79943 /* AAMessageDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62132C631CEAC64000C79943 /* AAMessageDataModel.swift */; };
 		622E3D3B1CECAB6000E447DD /* AAFriendListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622E3D3A1CECAB6000E447DD /* AAFriendListTableViewController.swift */; };
@@ -103,6 +104,7 @@
 		3356CB141CD3B9A200477610 /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		3356CB191CD3C1C800477610 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		3356CB1B1CD3C1DD00477610 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		33E861D71CED74D4007B9940 /* NewDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewDiscoverViewController.swift; sourceTree = "<group>"; };
 		62132C611CEABB9400C79943 /* AAMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAMessageViewController.swift; sourceTree = "<group>"; };
 		62132C631CEAC64000C79943 /* AAMessageDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAMessageDataModel.swift; sourceTree = "<group>"; };
 		62132C651CEAC99E00C79943 /* jsq_messages_sample.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = jsq_messages_sample.m4a; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 			children = (
 				332C6B671CECA32B001D9868 /* Cells */,
 				3356CB0A1CD3B8C600477610 /* DiscoverTableViewController.swift */,
+				33E861D71CED74D4007B9940 /* NewDiscoverViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -741,6 +744,7 @@
 			files = (
 				3356CB091CD3B87B00477610 /* SettingTableViewController.swift in Sources */,
 				3356CB0D1CD3B8E400477610 /* FriendsViewController.swift in Sources */,
+				33E861D81CED74D4007B9940 /* NewDiscoverViewController.swift in Sources */,
 				332C6B631CEC93AD001D9868 /* AboutUsTableViewCell.swift in Sources */,
 				622E3D3B1CECAB6000E447DD /* AAFriendListTableViewController.swift in Sources */,
 				62132C641CEAC64000C79943 /* AAMessageDataModel.swift in Sources */,

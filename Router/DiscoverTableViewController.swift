@@ -27,28 +27,30 @@ class DiscoverTableViewController: UITableViewController {
                 for object in objects {
                     if let sharing = object as? SharingModel {
                         self.sharings.append(sharing)
-                        AVFile.getFileWithObjectId(sharing.image?.objectId) { (file: AVFile!, error: NSError!) in
-                            if (error == nil) {
-                                let data = file.getData()
-                                if data != nil {
-                                    let image = UIImage(data: data)
-                                    self.images.append(image!)
-                                }
-                            } else {
-                                print(error)
-                            }
-                            self.tableView.reloadData()
-                            sender.endRefreshing()
-                            let hud =  MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-                            hud.mode = .CustomView
-                            let imageView = UIImage(named: "Checkmark")?.imageWithRenderingMode(.AlwaysTemplate)
-                            hud.customView = UIImageView(image:imageView)
-                            hud.square = true
-                            hud.labelText = "加载成功"
-                            hud.hide(true, afterDelay: 2)
-                        }
+                        self.tableView.reloadData()
+                        sender.endRefreshing()
+                        
+//                        AVFile.getFileWithObjectId(sharing.image?.objectId) { (file: AVFile!, error: NSError!) in
+//                            if (error == nil) {
+//                                let data = file.getData()
+//                                if data != nil {
+//                                    let image = UIImage(data: data)
+//                                    self.images.append(image!)
+//                                }
+//                            } else {
+//                                print(error)
+//                            }
+//                            
+//                        }
                     }
                 }
+                let hud =  MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                hud.mode = .CustomView
+                let imageView = UIImage(named: "Checkmark")?.imageWithRenderingMode(.AlwaysTemplate)
+                hud.customView = UIImageView(image:imageView)
+                hud.square = true
+                hud.labelText = "加载成功"
+                hud.hide(true, afterDelay: 2)
             } else {
                 sender.endRefreshing()
                 let alert = UIAlertView(title: "错误❌",
@@ -76,9 +78,16 @@ class DiscoverTableViewController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        getSharings()
+//        getSharings()
         
-        
+        if self.navigationController != nil {
+            let add = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(addTapped))
+            self.navigationItem.rightBarButtonItem = add
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        refresh()
     }
 
     override func didReceiveMemoryWarning() {
@@ -95,20 +104,19 @@ class DiscoverTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("DiscoverCell", forIndexPath: indexPath) as! DiscoverTableViewCell
-        
-        cell.username.text = sharings[indexPath.row].username
-        cell.content.text = sharings[indexPath.row].content
-        
-        if indexPath.row < images.count {
-            cell.discoverImage.image = images[indexPath.row]
+        if indexPath.row < sharings.count {
+            let count = sharings.count - indexPath.row - 1
+            cell.sharing = sharings[count]
         }
         
-        cell.date.text = dateToString(sharings[indexPath.row].createdAt)
-
         return cell
     }
     
     // MARK: - Helper
+    
+    func addTapped() {
+        self.navigationController?.pushViewController(NewDiscoverViewController.loadFromStoryboard(), animated: true)
+    }
     
     func refresh(){
         if refreshControl != nil {
@@ -116,45 +124,41 @@ class DiscoverTableViewController: UITableViewController {
         }
         refresh(refreshControl!)
     }
-    
-    func dateToString(date: NSDate) -> String {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let string = dateFormatter.stringFromDate(date)
-        return string
-    }
-    
-    func getSharings() {
-        var hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        hud.mode = .AnnularDeterminate
-        hud.labelText = "loading"
-        // recommend
-        let sharingQuery = AVQuery(className: "Sharing")
-        sharingQuery.findObjectsInBackgroundWithBlock({(objects:[AnyObject]!, error:NSError!) -> Void in
-            if (error == nil) {
-                for object in objects {
-                    if let sharing = object as? SharingModel {
-                        self.sharings.append(sharing)
-                        AVFile.getFileWithObjectId(sharing.image?.objectId) { (file: AVFile!, error: NSError!) in
-                            if (error == nil) {
-                                let data = file.getData()
-                                if data != nil {
-                                    let image = UIImage(data: data)
-                                    self.images.append(image!)
-                                }
-                            } else {
-                                print(error)
-                            }
-                            hud.hide(true)
-                            self.tableView.reloadData()
-                        }
-                    }
-                }
-            } else {
-                print(error)
-            }
-        })
-    }
+//    
+//    func getSharings() {
+//        sharings = []
+//        usernames = []
+//        images = []
+//        var hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+//        hud.mode = .AnnularDeterminate
+//        hud.labelText = "loading"
+//        // recommend
+//        let sharingQuery = AVQuery(className: "Sharing")
+//        sharingQuery.findObjectsInBackgroundWithBlock({(objects:[AnyObject]!, error:NSError!) -> Void in
+//            if (error == nil) {
+//                for object in objects {
+//                    if let sharing = object as? SharingModel {
+//                        self.sharings.append(sharing)
+//                        AVFile.getFileWithObjectId(sharing.image?.objectId) { (file: AVFile!, error: NSError!) in
+//                            if (error == nil) {
+//                                let data = file.getData()
+//                                if data != nil {
+//                                    let image = UIImage(data: data)
+//                                    self.images.append(image!)
+//                                }
+//                            } else {
+//                                print(error)
+//                            }
+//                            hud.hide(true)
+//                            self.tableView.reloadData()
+//                        }
+//                    }
+//                }
+//            } else {
+//                print(error)
+//            }
+//        })
+//    }
 
     /*
     // MARK: - Navigation
