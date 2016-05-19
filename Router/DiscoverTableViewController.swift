@@ -16,6 +16,50 @@ class DiscoverTableViewController: UITableViewController {
     var usernames: [String] = []
     var images: [UIImage] = []
     
+    
+    @IBAction func refresh(sender: UIRefreshControl) {
+        sharings = []
+        usernames = []
+        images = []
+        let sharingQuery = AVQuery(className: "Sharing")
+        sharingQuery.findObjectsInBackgroundWithBlock({(objects:[AnyObject]!, error:NSError!) -> Void in
+            if (error == nil) {
+                for object in objects {
+                    if let sharing = object as? SharingModel {
+                        self.sharings.append(sharing)
+                        AVFile.getFileWithObjectId(sharing.image?.objectId) { (file: AVFile!, error: NSError!) in
+                            if (error == nil) {
+                                let data = file.getData()
+                                if data != nil {
+                                    let image = UIImage(data: data)
+                                    self.images.append(image!)
+                                }
+                            } else {
+                                print(error)
+                            }
+                            self.tableView.reloadData()
+                            sender.endRefreshing()
+                            let hud =  MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                            hud.mode = .CustomView
+                            let imageView = UIImage(named: "Checkmark")?.imageWithRenderingMode(.AlwaysTemplate)
+                            hud.customView = UIImageView(image:imageView)
+                            hud.square = true
+                            hud.labelText = "加载成功"
+                            hud.hide(true, afterDelay: 2)
+                        }
+                    }
+                }
+            } else {
+                sender.endRefreshing()
+                let alert = UIAlertView(title: "错误❌",
+                    message: "错误信息：\(error.description)",
+                    delegate: nil,
+                    cancelButtonTitle: "Ok")
+                alert.show()
+            }
+        })
+    }
+    
     // MARK: - BaseViewController
     
     static func loadFromStoryboard() -> UIViewController {
@@ -33,12 +77,8 @@ class DiscoverTableViewController: UITableViewController {
         tableView.dataSource = self
         
         getSharings()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,6 +109,13 @@ class DiscoverTableViewController: UITableViewController {
     }
     
     // MARK: - Helper
+    
+    func refresh(){
+        if refreshControl != nil {
+            refreshControl?.beginRefreshing()
+        }
+        refresh(refreshControl!)
+    }
     
     func dateToString(date: NSDate) -> String {
         let dateFormatter = NSDateFormatter()
